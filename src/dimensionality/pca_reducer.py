@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 
 
-class PCAReducer:
+class pca_reducer:
     """
     Objetivo:
         Reducir dimensiones con ACP y agrupar con K-Medias.

@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 
 
-class TSNEReducer:
+class tsne_reducer:
     """
     Objetivo:
         Reducir dimensiones con t-SNE y agrupar con K-Medias.

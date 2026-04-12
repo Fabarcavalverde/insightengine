@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 
 
-class UMAPReducer:
+class umap_reducer:
     """
     Objetivo:
         Reducir dimensiones con UMAP y agrupar con K-Medias.

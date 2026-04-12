@@ -9,7 +9,8 @@ class DataPreparator:
     """
     Objetivo:
         Preparar el dataset limpio para cada módulo del pipeline.
-        Centraliza toda la lógica de transformación previa al modelado.
+        Centraliza toda la lógica de transformación previa al modelado,
+        incluyendo encoding, estandarización y formato de transacciones.
 
     Uso:
         prep = DataPreparator(df, target="PlayTennis")
@@ -38,16 +39,17 @@ class DataPreparator:
         """
         Objetivo:
             Preparar datos para ClassificationModels.
-            Codifica categóricas con dummies, conserva el target como columna.
+            Codifica categóricas con dummies, estandariza features y conserva el target.
 
         Parámetros:
             None
 
         Retorna:
-            pd.DataFrame: Features encoded + columna target al final.
+            pd.DataFrame: Features estandarizadas + columna target al final.
 
         Raises:
             ValueError: Si no se definió target en el constructor.
+
 
         """
         if self.target is None:
@@ -55,18 +57,26 @@ class DataPreparator:
 
         features = [c for c in self.datos.columns if c != self.target]
 
-        # codificar solo las features
+        # codificar categóricas
         df_features = pd.get_dummies(self.datos[features])
-        df_features[self.target] = self.datos[self.target].values
 
-        return df_features
+        # estandarizar
+        df_scaled = pd.DataFrame(
+            StandardScaler().fit_transform(df_features),
+            columns=df_features.columns,
+            index=df_features.index
+        )
+
+        df_scaled[self.target] = self.datos[self.target].values
+
+        return df_scaled
 
     def for_dimensionality(self) -> pd.DataFrame:
         """
         Objetivo:
             Preparar datos para PCAReducer, TSNEReducer y UMAPReducer.
-            Retorna solo columnas numéricas sin el target.
-            La estandarización la hace cada reductor internamente.
+            Retorna solo columnas numéricas sin el target, sin estandarizar
+            (cada reductor estandariza internamente).
 
         Parámetros:
             None
@@ -74,23 +84,23 @@ class DataPreparator:
         Retorna:
             pd.DataFrame: Solo columnas numéricas, sin target.
 
+        Output format:
+            | feature_1 | feature_2 | feature_3 |
+            |-----------|-----------|-----------|
+            | 1.2       | 3.4       | 0.8       |
         """
         df = self.datos.copy()
 
-        # quitar target si existe
         if self.target and self.target in df.columns:
             df = df.drop(columns=[self.target])
 
-        # solo numéricas
-        df_num = df.select_dtypes(include=[np.number])
-
-        return df_num
+        return df.select_dtypes(include=[np.number])
 
     def for_association(self, columnas: list = None) -> list:
         """
         Objetivo:
             Preparar lista de transacciones para Apriori y ECLAT.
-            Cada fila del df se convierte en una lista de ítems activos.
+            Cada fila se convierte en una lista de ítems activos.
 
         Parámetros:
             columnas (list | None): Columnas a usar como ítems.
@@ -99,6 +109,12 @@ class DataPreparator:
         Retorna:
             list[list[str]]: Lista de transacciones.
 
+        Output format:
+            [
+                ['Outlook_Sunny', 'Wind_Weak', 'PlayTennis_Yes'],
+                ['Outlook_Rain',  'Wind_Strong'],
+                ...
+            ]
         """
         df = self.datos.copy()
 
@@ -108,10 +124,8 @@ class DataPreparator:
         if columnas:
             df = df[columnas]
 
-        # codificar categóricas
         df_encoded = pd.get_dummies(df)
 
-        # cada fila → lista de columnas con valor verdadero
         transacciones = []
         for _, fila in df_encoded.iterrows():
             items = [col for col, val in fila.items() if val]
@@ -119,3 +133,40 @@ class DataPreparator:
 
         return transacciones
 
+    def for_regularization(self) -> tuple:
+        """
+        Objetivo:
+            Preparar (X, y) para LassoRidge.
+            Codifica categóricas, estandariza features y separa el target numérico.
+
+        Parámetros:
+            None
+
+        Retorna:
+            tuple: (X escalado pd.DataFrame, y pd.Series)
+
+        Raises:
+            ValueError: Si no se definió target en el constructor.
+            TypeError: Si el target no es numérico.
+
+        Output format:
+            X: pd.DataFrame con features estandarizadas
+            y: pd.Series con valores numéricos del target
+        """
+        if self.target is None:
+            raise ValueError("Se requiere definir target para regularización.")
+
+        if not pd.api.types.is_numeric_dtype(self.datos[self.target]):
+            raise TypeError(f"El target '{self.target}' debe ser numérico para Lasso/Ridge.")
+
+        features = [c for c in self.datos.columns if c != self.target]
+        X = pd.get_dummies(self.datos[features])
+        y = self.datos[self.target]
+
+        X_scaled = pd.DataFrame(
+            StandardScaler().fit_transform(X),
+            columns=X.columns,
+            index=X.index
+        )
+
+        return X_scaled, y
