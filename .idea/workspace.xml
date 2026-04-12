@@ -5,30 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42334c8e-66ac-4f9b-bf4e-d66aa202d835" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/raw/playtennis.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/association/ingestion/data_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/classification/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/settings.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/validator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eda/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eda/stats.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/association_rules.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/recommender.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pipeline/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pipeline/pipeline.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/preprocessing/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/preprocessing/feature_builder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/preprocessing/transformer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/io.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/logger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +38,7 @@
     &quot;Python.setup_project.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Fiorella&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -95,6 +73,8 @@
       <workItem from="1771901821794" duration="2339000" />
       <workItem from="1773624584698" duration="7739000" />
       <workItem from="1774229245710" duration="4992000" />
+      <workItem from="1774408603618" duration="104000" />
+      <workItem from="1775439774200" duration="5785000" />
     </task>
     <servers />
   </component>
@@ -104,6 +84,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/InsightEngine$setup_project.coverage" NAME="setup_project Coverage Results" MODIFIED="1771902151988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/InsightEngine$script.coverage" NAME="script Coverage Results" MODIFIED="1771901975511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/InsightEngine$main.coverage" NAME="main Coverage Results" MODIFIED="1774232979229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/InsightEngine$main.coverage" NAME="main Coverage Results" MODIFIED="1774234651487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>
