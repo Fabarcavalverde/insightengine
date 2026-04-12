@@ -5,7 +5,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 
 
-class DataPreparator:
+class data_preparator:
     """
     Objetivo:
         Preparar el dataset limpio para cada módulo del pipeline.
