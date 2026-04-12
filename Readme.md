@@ -104,17 +104,18 @@ El pipeline ejecuta todos los pasos en orden y genera `outputs/report.html` con 
 
 | Paso | Módulo | Responsable | Descripción |
 |------|--------|-------------|-------------|
-| 1 | `ingestion/data_loader.py` | Fernando    | Carga del dataset desde `data/raw/` |
-| 2 | `eda/exploratory_analysis.py` | Fernando    | Estadísticas descriptivas y visualizaciones |
-| 3 | `preprocessing/data_cleaner.py` | Fernando    | Limpieza, imputación y transformación |
-| 5.1 | `association/apriori.py` | Fernando    | Itemsets frecuentes con Apriori |
-| 5.2 | `association/eclat.py` | Fernando    | Itemsets frecuentes con ECLAT |
-| 6 | `association/association_rules.py` | Fiorella    | Generación y filtrado de reglas |
-| 7.1 | `dimensionality/pca_reducer.py` | Fiorella    | Reducción con ACP |
-| 7.2 | `dimensionality/tsne_reducer.py` | Fiorella    | Reducción con t-SNE |
-| 7.3 | `dimensionality/umap_reducer.py` | Fiorella    | Reducción con UMAP |
-| 8 | `regularization/lasso_ridge.py` | ---         | Regresión Lasso y Ridge |
-| 9 | `reporting/html_exporter.py` | ---         | Exportación del reporte HTML |
+| 1    | `ingestion/data_loader.py` | Fernando    | Carga del dataset desde `data/raw/` |
+| 2    | `eda/exploratory_analysis.py` | Fernando    | Estadísticas descriptivas |
+| 3    | `preprocessing/data_cleaner.py` | Fernando    | Limpieza, imputación y transformación |
+| 4    | `eda/exploratory_analysis.py` | Fernando    | Estadísticas descriptivas |
+| 5.1  | `association/apriori.py` | Fiorella    | Itemsets frecuentes con Apriori |
+| 5.2  | `association/eclat.py` | Fernando    | Itemsets frecuentes con ECLAT |
+| 6    | `association/association_rules.py` | Fiorella    | Generación y filtrado de reglas |
+| 7.1  | `dimensionality/pca_reducer.py` | Fiorella    | Reducción con ACP |
+| 7.2  | `dimensionality/tsne_reducer.py` | Fiorella    | Reducción con t-SNE |
+| 7.3  | `dimensionality/umap_reducer.py` | Fiorella    | Reducción con UMAP |
+| 8    | `regularization/lasso_ridge.py` | ---         | Regresión Lasso y Ridge |
+| 9    | `reporting/html_exporter.py` | ---         | Exportación del reporte HTML |
 
 ---
 
