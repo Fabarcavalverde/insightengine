@@ -1,45 +1,101 @@
 # src/main.py
 
 import os
-import pandas as pd
-from preprocessing.data_preparator import DataPreparator
+import sys
+
+# agregar src al path
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from utils.config import load_config, RAW_DIR
+from ingestion.data_loader import DataLoader
+from preprocessing.data_preparator import data_preparator
+from association.apriori import Apriori
+from association.eclat import eclat
 from classification.classification import classification
-from dimensionality.pca_reducer  import pca_reducer
+from dimensionality.pca_reducer import pca_reducer
 from dimensionality.tsne_reducer import tsne_reducer
 from dimensionality.umap_reducer import umap_reducer
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DIR  = os.path.join(BASE_DIR, "data", "raw")
-
 
 def main():
-    # cargar datos — reemplazar con data_loader de Fernando
-    df = pd.read_csv(os.path.join(RAW_DIR, "playtennis.csv"), delimiter=",", decimal=".")
-    target = "PlayTennis"
+    cfg = load_config()
+    dcfg = cfg["data"]
+    acfg = cfg["association"]
+    ccfg = cfg["classification"]
+    dimcfg = cfg["dimensionality"]
+    km = dimcfg["kmeans"]
 
-    # corregir typos y NaN
-    df[target] = df[target].replace("Ye", "Yes")
-    df = df.dropna()
+    # cargar datos
+    loader = DataLoader(RAW_DIR)
+    df = loader.load(dcfg)
 
-    # preparador central
-    prep = DataPreparator(df, target=target)
+    # corregir typos si los hay
+    for col, reemplazos in dcfg.get("typos", {}).items():
+        for malo, bueno in reemplazos.items():
+            df[col] = df[col].replace(malo, bueno)
 
-    # --- clasificación ---
+    if dcfg.get("drop_na"):
+        df = df.dropna()
+
+    print(f"Dataset cargado: {df.shape[0]} filas, {df.shape[1]} columnas")
+    print(df.head(3))
+
+    # preparador central — un solo df para todo
+    prep = data_preparator(df, target=dcfg["target"])
+
+    # ----------------------------------------------------------------
+    # asociación
+    # ----------------------------------------------------------------
+    columnas_asoc = dcfg.get("columnas_asociacion") or None
+    transacciones = prep.for_association(columnas=columnas_asoc)
+
+    print("\n--- Apriori: itemsets frecuentes ---")
+    ap = Apriori(transacciones, min_support=acfg["apriori"]["min_support"])
+    itemsets_ap = ap.fit()
+    print(itemsets_ap)
+
+    print("\n--- Apriori: reglas de asociación ---")
+    reglas_ap = ap.get_rules(min_confidence=acfg["rules"]["min_confidence"])
+    print(reglas_ap)
+
+    print("\n--- ECLAT: itemsets frecuentes ---")
+    ec = eclat(transacciones, min_support=acfg["eclat"]["min_support"])
+    print(ec.fit())
+
+    # ----------------------------------------------------------------
+    # clasificación
+    # ----------------------------------------------------------------
     print("\n--- Clasificación ---")
-    classification_df = classification(prep.for_classification(), target=target)
-    print(classification_df.run_all().to_string())
+    cm = classification(
+        prep.for_classification(),
+        target=dcfg["target"],
+        train_size=ccfg["train_size"],
+        random_state=ccfg["random_state"]
+    )
+    print(cm.run_all().to_string())
 
-    # --- reducción de dimensiones ---
-    dimensionality_df = prep.for_dimensionality()
+    # ----------------------------------------------------------------
+    # reducción de dimensiones
+    # ----------------------------------------------------------------
+    df_dim = prep.for_dimensionality()
 
     print("\n--- ACP ---")
-    print(pca_reducer(dimensionality_df, n_clusters=3).fit())
+    print(pca_reducer(df_dim, n_components=dimcfg["n_components"],
+                     n_clusters=dimcfg["n_clusters"], max_iter=km["max_iter"],
+                     n_init=km["n_init"], random_state=km["random_state"]).fit())
 
     print("\n--- t-SNE ---")
-    print(tsne_reducer(dimensionality_df, perplexity=3, n_clusters=3).fit())
+    print(tsne_reducer(df_dim, n_components=dimcfg["n_components"],
+                      perplexity=dimcfg["tsne"]["perplexity"],
+                      learning_rate=dimcfg["tsne"]["learning_rate"],
+                      n_clusters=dimcfg["n_clusters"], max_iter=km["max_iter"],
+                      n_init=km["n_init"], random_state=km["random_state"]).fit())
 
     print("\n--- UMAP ---")
-    print(umap_reducer(dimensionality_df, n_neighbors=2, n_clusters=3).fit())
+    print(umap_reducer(df_dim, n_components=dimcfg["n_components"],
+                      n_neighbors=dimcfg["umap"]["n_neighbors"],
+                      n_clusters=dimcfg["n_clusters"], max_iter=km["max_iter"],
+                      n_init=km["n_init"], random_state=km["random_state"]).fit())
 
 
 if __name__ == "__main__":

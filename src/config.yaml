@@ -1,0 +1,59 @@
+# config.yaml
+# Configuración central del pipeline InsightEngine
+
+data:
+  filename: "german.data"
+  delimiter: " "
+  decimal: "."
+  header: null
+  target: "risk"
+  drop_na: true
+  columnas:
+    - checking_account
+    - duration
+    - credit_history
+    - purpose
+    - credit_amount
+    - savings_account
+    - employment
+    - installment_rate
+    - personal_status
+    - other_debtors
+    - residence_since
+    - property
+    - age
+    - other_installments
+    - housing
+    - existing_credits
+    - job
+    - liable_people
+    - telephone
+    - foreign_worker
+    - risk
+  columnas_asociacion: []
+
+association:
+  apriori:
+    min_support: 0.3
+  eclat:
+    min_support: 300
+  rules:
+    min_confidence: 0.6
+    min_threshold: 1.0
+
+classification:
+  train_size: 0.7
+  random_state: 42
+
+dimensionality:
+  n_components: 2
+  n_clusters: 3
+  tsne:
+    perplexity: 30
+    learning_rate: "auto"
+  umap:
+    n_neighbors: 15
+  kmeans:
+    max_iter: 2000
+    n_init: 150
+    random_state: 42
