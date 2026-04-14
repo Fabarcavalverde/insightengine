@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>InsightEngine — Resumen del Pipeline</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#f4f6fb;color:#1a1a2e;font-size:15px}
+nav{background:#1E2761;padding:0 2rem;position:sticky;top:0;z-index:100}
+.nav-inner{display:flex;align-items:center;max-width:1100px;margin:0 auto}
+.nav-inner::before{content:'InsightEngine';color:#4FC3F7;font-weight:700;font-size:.95rem;margin-right:2rem;white-space:nowrap}
+nav a{color:#CADCFC;text-decoration:none;padding:.85rem .9rem;font-size:.82rem;display:inline-block}
+nav a:hover,nav a.active{color:#4FC3F7;border-bottom:2px solid #4FC3F7}
+.page{max-width:1100px;margin:2rem auto;padding:0 1.2rem 4rem}
+h1{font-size:1.5rem;font-weight:600;color:#1E2761;margin-bottom:.25rem}
+.sub{font-size:.85rem;color:#888;margin-bottom:1.8rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.9rem;margin-bottom:1.8rem}
+.card{background:#1E2761;border-radius:10px;padding:1.1rem .9rem;text-align:center}
+.card-val{font-size:1.8rem;font-weight:700;color:#4FC3F7}
+.card-lbl{font-size:.73rem;color:#CADCFC;margin-top:.2rem}
+.box{background:white;border-radius:10px;padding:1.3rem;box-shadow:0 1px 4px rgba(0,0,0,.07);margin-bottom:1.3rem}
+.box h2{font-size:.95rem;font-weight:600;color:#1E2761;margin-bottom:.9rem;padding-bottom:.4rem;border-bottom:2px solid #e8ecf5}
+.insight{background:#EEF2FF;border-left:4px solid #4FC3F7;border-radius:0 8px 8px 0;padding:1rem 1.2rem;margin-bottom:1.3rem}
+.insight h2{font-size:.95rem;font-weight:600;color:#1E2761;margin-bottom:.6rem}
+.insight ul{padding-left:1.2rem;font-size:.85rem;color:#333;line-height:1.8}
+.insight li{margin-bottom:.2rem}
+.warn{background:#FFF8E1;border-left:4px solid #F57F17;border-radius:0 8px 8px 0;padding:1rem 1.2rem;margin-bottom:1.3rem}
+.warn h2{font-size:.95rem;font-weight:600;color:#7B5800;margin-bottom:.6rem}
+.warn p{font-size:.85rem;color:#5D4037;line-height:1.7}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th{background:#1E2761;color:white;padding:.55rem .75rem;text-align:left;font-weight:500}
+td{padding:.5rem .75rem;border-bottom:1px solid #eef0f7;word-break:break-word}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#f0f4ff}
+.g{color:#2e7d32;background:#e8f5e9;padding:.15rem .5rem;border-radius:12px;font-size:.72rem;font-weight:600}
+.b{color:#1565c0;background:#e3f2fd;padding:.15rem .5rem;border-radius:12px;font-size:.72rem;font-weight:600}
+.r{color:#c62828;background:#fce4ec;padding:.15rem .5rem;border-radius:12px;font-size:.72rem;font-weight:600}
+.rec{border-left:4px solid #4FC3F7;background:#f8f9ff;border-radius:0 8px 8px 0;padding:.9rem 1.1rem;margin-bottom:.8rem}
+.rec h3{font-size:.88rem;font-weight:600;color:#1E2761;margin-bottom:.25rem}
+.rec-rule{font-size:.75rem;color:#5c6bc0;background:#e8eaf6;padding:.2rem .45rem;border-radius:3px;margin-bottom:.4rem;display:inline-block}
+.rec p{font-size:.8rem;color:#444;line-height:1.5}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:680px){.two{grid-template-columns:1fr}}
+</style></head><body>
+<nav><div class="nav-inner"><a href="index.html" class="active">Resumen</a><a href="eda.html" class="">EDA</a><a href="apriori.html" class="">Apriori</a><a href="eclat.html" class="">ECLAT</a><a href="classification.html" class="">Clasificación</a><a href="dimensionality.html" class="">Dimensionalidad</a><a href="lasso_ridge.html" class="">Lasso / Ridge</a></div></nav>
+<div class="page"><h1>Resumen del Pipeline</h1>
+<p class="sub">German Credit Dataset — Colegio Universitario de Cartago · BD-162 · 2026</p>
+<div class="cards">
+  <div class="card"><div class="card-val">1,000</div><div class="card-lbl">Registros</div></div>
+  <div class="card"><div class="card-val">21</div><div class="card-lbl">Variables</div></div>
+  <div class="card"><div class="card-val">144</div><div class="card-lbl">Itemsets frecuentes</div></div>
+  <div class="card"><div class="card-val">423</div><div class="card-lbl">Reglas generadas</div></div>
+  <div class="card"><div class="card-val">78.0%</div><div class="card-lbl">Mejor precisión</div></div>
+  <div class="card"><div class="card-val">0.521</div><div class="card-lbl">R² Ridge</div></div>
+</div>
+<div class="insight"><h2>¿Qué es InsightEngine?</h2>
+<ul>
+  <li>Pipeline de minería de datos orientado a objetos desarrollado en Python</li>
+  <li>Automatiza limpieza, EDA, asociación, clasificación, dimensionalidad y regularización</li>
+  <li>Configurable mediante YAML — adaptable a cualquier dataset sin modificar el código</li>
+  <li>Genera este reporte HTML desde los resultados del pipeline</li>
+</ul></div>
+<div class="insight"><h2>Hallazgos principales</h2>
+<ul>
+  <li><strong>Asociación:</strong> el 96.3% de clientes son trabajadores extranjeros — segmento dominante y confiable</li>
+  <li><strong>Clasificación:</strong> AdaBoost alcanza 78% de precisión global; NaiveBayes detecta mejor el riesgo malo (73.6%)</li>
+  <li><strong>Dimensionalidad:</strong> los tres métodos (ACP, t-SNE, UMAP) identificaron 3 clusters coherentes</li>
+  <li><strong>Regularización:</strong> R²=0.52 — las variables categóricas explican el 52% de la varianza del monto de crédito</li>
+</ul></div>
+<div class="box"><h2>Navegación del reporte</h2>
+<table><tr><th>Página</th><th>Módulo</th><th>Contenido</th></tr>
+<tr><td><a href="eda.html">EDA</a></td><td>exploratory_analysis.py</td><td>Estadísticas descriptivas, outliers y correlaciones</td></tr>
+<tr><td><a href="apriori.html">Apriori</a></td><td>apriori.py</td><td>144 itemsets frecuentes y 423 reglas con métricas</td></tr>
+<tr><td><a href="eclat.html">ECLAT</a></td><td>eclat.py</td><td>144 itemsets con algoritmo de formato vertical</td></tr>
+<tr><td><a href="classification.html">Clasificación</a></td><td>classification.py</td><td>12 modelos supervisados comparados</td></tr>
+<tr><td><a href="dimensionality.html">Dimensionalidad</a></td><td>pca / tsne / umap</td><td>Reducción a 2D con clustering K-Medias</td></tr>
+<tr><td><a href="lasso_ridge.html">Lasso / Ridge</a></td><td>lasso_ridge.py</td><td>Regularización y recomendaciones de negocio</td></tr>
+</table></div>
+</div>
+</body></html>

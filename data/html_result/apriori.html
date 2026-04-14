@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>InsightEngine — Reglas de Asociación — Apriori</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#f4f6fb;color:#1a1a2e;font-size:15px}
+nav{background:#1E2761;padding:0 2rem;position:sticky;top:0;z-index:100}
+.nav-inner{display:flex;align-items:center;max-width:1100px;margin:0 auto}
+.nav-inner::before{content:'InsightEngine';color:#4FC3F7;font-weight:700;font-size:.95rem;margin-right:2rem;white-space:nowrap}
+nav a{color:#CADCFC;text-decoration:none;padding:.85rem .9rem;font-size:.82rem;display:inline-block}
+nav a:hover,nav a.active{color:#4FC3F7;border-bottom:2px solid #4FC3F7}
+.page{max-width:1100px;margin:2rem auto;padding:0 1.2rem 4rem}
+h1{font-size:1.5rem;font-weight:600;color:#1E2761;margin-bottom:.25rem}
+.sub{font-size:.85rem;color:#888;margin-bottom:1.8rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.9rem;margin-bottom:1.8rem}
+.card{background:#1E2761;border-radius:10px;padding:1.1rem .9rem;text-align:center}
+.card-val{font-size:1.8rem;font-weight:700;color:#4FC3F7}
+.card-lbl{font-size:.73rem;color:#CADCFC;margin-top:.2rem}
+.box{background:white;border-radius:10px;padding:1.3rem;box-shadow:0 1px 4px rgba(0,0,0,.07);margin-bottom:1.3rem}
+.box h2{font-size:.95rem;font-weight:600;color:#1E2761;margin-bottom:.9rem;padding-bottom:.4rem;border-bottom:2px solid #e8ecf5}
+.insight{background:#EEF2FF;border-left:4px solid #4FC3F7;border-radius:0 8px 8px 0;padding:1rem 1.2rem;margin-bottom:1.3rem}
+.insight h2{font-size:.95rem;font-weight:600;color:#1E2761;margin-bottom:.6rem}
+.insight ul{padding-left:1.2rem;font-size:.85rem;color:#333;line-height:1.8}
+.insight li{margin-bottom:.2rem}
+.warn{background:#FFF8E1;border-left:4px solid #F57F17;border-radius:0 8px 8px 0;padding:1rem 1.2rem;margin-bottom:1.3rem}
+.warn h2{font-size:.95rem;font-weight:600;color:#7B5800;margin-bottom:.6rem}
+.warn p{font-size:.85rem;color:#5D4037;line-height:1.7}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th{background:#1E2761;color:white;padding:.55rem .75rem;text-align:left;font-weight:500}
+td{padding:.5rem .75rem;border-bottom:1px solid #eef0f7;word-break:break-word}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#f0f4ff}
+.g{color:#2e7d32;background:#e8f5e9;padding:.15rem .5rem;border-radius:12px;font-size:.72rem;font-weight:600}
+.b{color:#1565c0;background:#e3f2fd;padding:.15rem .5rem;border-radius:12px;font-size:.72rem;font-weight:600}
+.r{color:#c62828;background:#fce4ec;padding:.15rem .5rem;border-radius:12px;font-size:.72rem;font-weight:600}
+.rec{border-left:4px solid #4FC3F7;background:#f8f9ff;border-radius:0 8px 8px 0;padding:.9rem 1.1rem;margin-bottom:.8rem}
+.rec h3{font-size:.88rem;font-weight:600;color:#1E2761;margin-bottom:.25rem}
+.rec-rule{font-size:.75rem;color:#5c6bc0;background:#e8eaf6;padding:.2rem .45rem;border-radius:3px;margin-bottom:.4rem;display:inline-block}
+.rec p{font-size:.8rem;color:#444;line-height:1.5}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:680px){.two{grid-template-columns:1fr}}
+</style></head><body>
+<nav><div class="nav-inner"><a href="index.html" class="">Resumen</a><a href="eda.html" class="">EDA</a><a href="apriori.html" class="active">Apriori</a><a href="eclat.html" class="">ECLAT</a><a href="classification.html" class="">Clasificación</a><a href="dimensionality.html" class="">Dimensionalidad</a><a href="lasso_ridge.html" class="">Lasso / Ridge</a></div></nav>
+<div class="page"><h1>Reglas de Asociación — Apriori</h1>
+<p class="sub">Algoritmo Apriori implementado con mlxtend · TransactionEncoder sobre variables categóricas</p>
+
+<div class="cards">
+  <div class="card"><div class="card-val">144</div><div class="card-lbl">Itemsets frecuentes</div></div>
+  <div class="card"><div class="card-val">423</div><div class="card-lbl">Reglas generadas</div></div>
+  <div class="card"><div class="card-val">0.30</div><div class="card-lbl">Soporte mínimo</div></div>
+  <div class="card"><div class="card-val">0.60</div><div class="card-lbl">Confianza mínima</div></div>
+</div>
+
+<div class="insight"><h2>¿Qué significan estas métricas?</h2>
+<ul>
+  <li><strong>Soporte:</strong> proporción de transacciones que contienen el itemset. Soporte 0.963 = el ítem aparece en 963 de 1,000 clientes</li>
+  <li><strong>Confianza:</strong> probabilidad de que el consecuente ocurra dado el antecedente. Confianza 0.823 = el 82.3% de clientes sin cuenta tienen vivienda propia</li>
+  <li><strong>Lift > 1:</strong> la asociación es más fuerte que el azar. Lift 1.082 = la combinación ocurre un 8.2% más de lo esperado al azar</li>
+</ul></div>
+
+<div class="insight"><h2>Patrones más relevantes encontrados</h2>
+<ul>
+  <li><strong>Perfil dominante:</strong> trabajador_extranjero + sin_deudores + sin_otros_planes co-ocurren en más del 78% de los clientes</li>
+  <li><strong>Relación clave:</strong> clientes sin_cuenta tienen mayor probabilidad de tener vivienda_propia (lift 1.082) — contradice la intuición de que sin cuenta = mayor riesgo</li>
+  <li><strong>Historial crediticio:</strong> pagando_puntual es el 2do itemset más frecuente (53%) y co-ocurre frecuentemente con sin_deudores</li>
+  <li><strong>Los 144 itemsets cubren las principales combinaciones</strong> de variables categóricas con soporte ≥ 30%</li>
+</ul></div>
+
+<div class="two">
+  <div class="box"><h2>Top itemsets por soporte</h2>
+  <table><tr><th>Itemset</th><th>Soporte</th></tr>
+  <tr><td>trabajador_extranjero</td><td><span class="r">0.963</span></td></tr>
+  <tr><td>sin_deudores</td><td><span class="r">0.907</span></td></tr>
+  <tr><td>sin_deudores + trabajador_extranjero</td><td>0.880</td></tr>
+  <tr><td>sin_otros_planes</td><td>0.814</td></tr>
+  <tr><td>sin_otros_planes + trabajador_extranjero</td><td>0.782</td></tr>
+  <tr><td>vivienda_propietario</td><td>0.713</td></tr>
+  <tr><td>riesgo_bueno</td><td>0.700</td></tr>
+  <tr><td>propietario + sin_deudores</td><td>0.653</td></tr>
+  <tr><td>empleado_calificado</td><td>0.630</td></tr>
+  <tr><td>ahorros_bajos</td><td>0.603</td></tr>
+  </table></div>
+
+  <div class="box"><h2>Top reglas por lift</h2>
+  <table><tr><th>Antecedente → Consecuente</th><th>Conf.</th><th>Lift</th></tr>
+  <tr><td>sin_cuenta → vivienda_propia</td><td>0.823</td><td><span class="g">1.082</span></td></tr>
+  <tr><td>sin_cuenta → empleado_calificado</td><td>0.778</td><td><span class="g">1.044</span></td></tr>
+  <tr><td>sin_cuenta → sin_otros_planes</td><td>0.762</td><td><span class="g">1.029</span></td></tr>
+  <tr><td>sin_cuenta → trabajador_extranjero</td><td>0.755</td><td><span class="g">1.028</span></td></tr>
+  <tr><td>pagando_puntual → sin_deudores</td><td>0.912</td><td><span class="g">1.020</span></td></tr>
+  <tr><td>pagando_puntual → propietario</td><td>0.901</td><td><span class="g">1.019</span></td></tr>
+  <tr><td>empleado_calificado → sin_deudores</td><td>0.895</td><td>1.006</td></tr>
+  <tr><td>sin_deudores → propietario</td><td>0.880</td><td>1.005</td></tr>
+  </table></div>
+</div>
+</div>
+</body></html>

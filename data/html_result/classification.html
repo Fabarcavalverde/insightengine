@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>InsightEngine — Modelos de Clasificación</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#f4f6fb;color:#1a1a2e;font-size:15px}
+nav{background:#1E2761;padding:0 2rem;position:sticky;top:0;z-index:100}
+.nav-inner{display:flex;align-items:center;max-width:1100px;margin:0 auto}
+.nav-inner::before{content:'InsightEngine';color:#4FC3F7;font-weight:700;font-size:.95rem;margin-right:2rem;white-space:nowrap}
+nav a{color:#CADCFC;text-decoration:none;padding:.85rem .9rem;font-size:.82rem;display:inline-block}
+nav a:hover,nav a.active{color:#4FC3F7;border-bottom:2px solid #4FC3F7}
+.page{max-width:1100px;margin:2rem auto;padding:0 1.2rem 4rem}
+h1{font-size:1.5rem;font-weight:600;color:#1E2761;margin-bottom:.25rem}
+.sub{font-size:.85rem;color:#888;margin-bottom:1.8rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.9rem;margin-bottom:1.8rem}
+.card{background:#1E2761;border-radius:10px;padding:1.1rem .9rem;text-align:center}
+.card-val{font-size:1.8rem;font-weight:700;color:#4FC3F7}
+.card-lbl{font-size:.73rem;color:#CADCFC;margin-top:.2rem}
+.box{background:white;border-radius:10px;padding:1.3rem;box-shadow:0 1px 4px rgba(0,0,0,.07);margin-bottom:1.3rem}
+.box h2{font-size:.95rem;font-weight:600;color:#1E2761;margin-bottom:.9rem;padding-bottom:.4rem;border-bottom:2px solid #e8ecf5}
+.insight{background:#EEF2FF;border-left:4px solid #4FC3F7;border-radius:0 8px 8px 0;padding:1rem 1.2rem;margin-bottom:1.3rem}
+.insight h2{font-size:.95rem;font-weight:600;color:#1E2761;margin-bottom:.6rem}
+.insight ul{padding-left:1.2rem;font-size:.85rem;color:#333;line-height:1.8}
+.insight li{margin-bottom:.2rem}
+.warn{background:#FFF8E1;border-left:4px solid #F57F17;border-radius:0 8px 8px 0;padding:1rem 1.2rem;margin-bottom:1.3rem}
+.warn h2{font-size:.95rem;font-weight:600;color:#7B5800;margin-bottom:.6rem}
+.warn p{font-size:.85rem;color:#5D4037;line-height:1.7}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th{background:#1E2761;color:white;padding:.55rem .75rem;text-align:left;font-weight:500}
+td{padding:.5rem .75rem;border-bottom:1px solid #eef0f7;word-break:break-word}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#f0f4ff}
+.g{color:#2e7d32;background:#e8f5e9;padding:.15rem .5rem;border-radius:12px;font-size:.72rem;font-weight:600}
+.b{color:#1565c0;background:#e3f2fd;padding:.15rem .5rem;border-radius:12px;font-size:.72rem;font-weight:600}
+.r{color:#c62828;background:#fce4ec;padding:.15rem .5rem;border-radius:12px;font-size:.72rem;font-weight:600}
+.rec{border-left:4px solid #4FC3F7;background:#f8f9ff;border-radius:0 8px 8px 0;padding:.9rem 1.1rem;margin-bottom:.8rem}
+.rec h3{font-size:.88rem;font-weight:600;color:#1E2761;margin-bottom:.25rem}
+.rec-rule{font-size:.75rem;color:#5c6bc0;background:#e8eaf6;padding:.2rem .45rem;border-radius:3px;margin-bottom:.4rem;display:inline-block}
+.rec p{font-size:.8rem;color:#444;line-height:1.5}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:680px){.two{grid-template-columns:1fr}}
+</style></head><body>
+<nav><div class="nav-inner"><a href="index.html" class="">Resumen</a><a href="eda.html" class="">EDA</a><a href="apriori.html" class="">Apriori</a><a href="eclat.html" class="">ECLAT</a><a href="classification.html" class="active">Clasificación</a><a href="dimensionality.html" class="">Dimensionalidad</a><a href="lasso_ridge.html" class="">Lasso / Ridge</a></div></nav>
+<div class="page"><h1>Modelos de Clasificación</h1>
+<p class="sub">12 modelos supervisados · train 70% / test 30% · target: riesgo (bueno/malo)</p>
+
+<div class="cards">
+  <div class="card"><div class="card-val">78.0%</div><div class="card-lbl">Mejor PG (AdaBoost)</div></div>
+  <div class="card"><div class="card-val">77.7%</div><div class="card-lbl">2do lugar (LDA)</div></div>
+  <div class="card"><div class="card-val">73.6%</div><div class="card-lbl">Mejor riesgo malo (NaiveBayes)</div></div>
+</div>
+
+<div class="insight"><h2>Análisis de resultados</h2>
+<ul>
+  <li><strong>AdaBoost lidera</strong> con 78.0% de precisión global — el ensamble de árboles débiles supera a los modelos individuales</li>
+  <li><strong>LDA (77.7%) sorprende</strong> por su simplicidad — el problema tiene separación lineal suficiente entre clases</li>
+  <li><strong>NaiveBayes es estratégicamente valioso:</strong> aunque tiene la menor PG (70.3%), detecta el 73.6% de los casos de riesgo malo — el más importante para el negocio</li>
+  <li><strong>SVM RBF y Random Forest empatan</strong> en 76.3% — ambos capturan bien la estructura no lineal del dataset</li>
+  <li><strong>Los árboles (Entropy y Gini) empatan exactamente</strong> en 71.0% — con este dataset el criterio de división no hace diferencia</li>
+</ul></div>
+
+<div class="warn"><h2>Efecto del desbalance de clases</h2>
+<p>El dataset tiene 70% riesgo bueno y 30% riesgo malo. Esto hace que todos los modelos sean más precisos prediciendo riesgo bueno. Para un sistema de crédito real, los falsos negativos (clasificar riesgo malo como bueno) son más costosos — por eso NaiveBayes puede ser preferible a pesar de su menor PG general.</p>
+</div>
+
+<div class="box"><h2>Resultados completos</h2>
+<table><tr><th>Modelo</th><th>Precisión Global</th><th>Error</th><th>Recall Riesgo Bueno</th><th>Recall Riesgo Malo</th></tr>
+<tr><td>AdaBoost</td><td><span class="g">0.7800</span></td><td>0.2200</td><td>0.9522</td><td>0.3846</td></tr>
+<tr><td>LDA</td><td><span class="g">0.7767</span></td><td>0.2233</td><td>0.9043</td><td>0.4835</td></tr>
+<tr><td>SVM_RBF</td><td><span class="b">0.7633</span></td><td>0.2367</td><td>0.9474</td><td>0.3407</td></tr>
+<tr><td>RandomForest</td><td><span class="b">0.7633</span></td><td>0.2367</td><td>0.9522</td><td>0.3297</td></tr>
+<tr><td>SVM_Sigmoid</td><td><span class="b">0.7600</span></td><td>0.2400</td><td>0.9091</td><td>0.4176</td></tr>
+<tr><td>GradientBoosting</td><td>0.7367</td><td>0.2633</td><td>0.8565</td><td>0.4615</td></tr>
+<tr><td>QDA</td><td>0.7133</td><td>0.2867</td><td>0.7608</td><td>0.6044</td></tr>
+<tr><td>Tree_Entropy</td><td>0.7100</td><td>0.2900</td><td>0.9330</td><td>0.1978</td></tr>
+<tr><td>Tree_Gini</td><td>0.7100</td><td>0.2900</td><td>0.9330</td><td>0.1978</td></tr>
+<tr><td>KNN</td><td>0.7233</td><td>0.2767</td><td>0.8517</td><td>0.4286</td></tr>
+<tr><td>SVM_Poly</td><td>0.7067</td><td>0.2933</td><td>0.8421</td><td>0.3956</td></tr>
+<tr><td>NaiveBayes</td><td>0.7033</td><td>0.2967</td><td>0.6890</td><td><span class="g">0.7363</span></td></tr>
+</table></div>
+</div>
+</body></html>

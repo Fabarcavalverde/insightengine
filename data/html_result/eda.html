@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>InsightEngine — Análisis Exploratorio de Datos</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#f4f6fb;color:#1a1a2e;font-size:15px}
+nav{background:#1E2761;padding:0 2rem;position:sticky;top:0;z-index:100}
+.nav-inner{display:flex;align-items:center;max-width:1100px;margin:0 auto}
+.nav-inner::before{content:'InsightEngine';color:#4FC3F7;font-weight:700;font-size:.95rem;margin-right:2rem;white-space:nowrap}
+nav a{color:#CADCFC;text-decoration:none;padding:.85rem .9rem;font-size:.82rem;display:inline-block}
+nav a:hover,nav a.active{color:#4FC3F7;border-bottom:2px solid #4FC3F7}
+.page{max-width:1100px;margin:2rem auto;padding:0 1.2rem 4rem}
+h1{font-size:1.5rem;font-weight:600;color:#1E2761;margin-bottom:.25rem}
+.sub{font-size:.85rem;color:#888;margin-bottom:1.8rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.9rem;margin-bottom:1.8rem}
+.card{background:#1E2761;border-radius:10px;padding:1.1rem .9rem;text-align:center}
+.card-val{font-size:1.8rem;font-weight:700;color:#4FC3F7}
+.card-lbl{font-size:.73rem;color:#CADCFC;margin-top:.2rem}
+.box{background:white;border-radius:10px;padding:1.3rem;box-shadow:0 1px 4px rgba(0,0,0,.07);margin-bottom:1.3rem}
+.box h2{font-size:.95rem;font-weight:600;color:#1E2761;margin-bottom:.9rem;padding-bottom:.4rem;border-bottom:2px solid #e8ecf5}
+.insight{background:#EEF2FF;border-left:4px solid #4FC3F7;border-radius:0 8px 8px 0;padding:1rem 1.2rem;margin-bottom:1.3rem}
+.insight h2{font-size:.95rem;font-weight:600;color:#1E2761;margin-bottom:.6rem}
+.insight ul{padding-left:1.2rem;font-size:.85rem;color:#333;line-height:1.8}
+.insight li{margin-bottom:.2rem}
+.warn{background:#FFF8E1;border-left:4px solid #F57F17;border-radius:0 8px 8px 0;padding:1rem 1.2rem;margin-bottom:1.3rem}
+.warn h2{font-size:.95rem;font-weight:600;color:#7B5800;margin-bottom:.6rem}
+.warn p{font-size:.85rem;color:#5D4037;line-height:1.7}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th{background:#1E2761;color:white;padding:.55rem .75rem;text-align:left;font-weight:500}
+td{padding:.5rem .75rem;border-bottom:1px solid #eef0f7;word-break:break-word}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#f0f4ff}
+.g{color:#2e7d32;background:#e8f5e9;padding:.15rem .5rem;border-radius:12px;font-size:.72rem;font-weight:600}
+.b{color:#1565c0;background:#e3f2fd;padding:.15rem .5rem;border-radius:12px;font-size:.72rem;font-weight:600}
+.r{color:#c62828;background:#fce4ec;padding:.15rem .5rem;border-radius:12px;font-size:.72rem;font-weight:600}
+.rec{border-left:4px solid #4FC3F7;background:#f8f9ff;border-radius:0 8px 8px 0;padding:.9rem 1.1rem;margin-bottom:.8rem}
+.rec h3{font-size:.88rem;font-weight:600;color:#1E2761;margin-bottom:.25rem}
+.rec-rule{font-size:.75rem;color:#5c6bc0;background:#e8eaf6;padding:.2rem .45rem;border-radius:3px;margin-bottom:.4rem;display:inline-block}
+.rec p{font-size:.8rem;color:#444;line-height:1.5}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:680px){.two{grid-template-columns:1fr}}
+</style></head><body>
+<nav><div class="nav-inner"><a href="index.html" class="">Resumen</a><a href="eda.html" class="active">EDA</a><a href="apriori.html" class="">Apriori</a><a href="eclat.html" class="">ECLAT</a><a href="classification.html" class="">Clasificación</a><a href="dimensionality.html" class="">Dimensionalidad</a><a href="lasso_ridge.html" class="">Lasso / Ridge</a></div></nav>
+<div class="page"><h1>Análisis Exploratorio de Datos</h1>
+<p class="sub">Dataset limpio: 1,000 filas · 21 columnas · 0 nulos · 0 duplicados · 7 numéricas · 14 categóricas</p>
+
+<div class="insight"><h2>Hallazgos del EDA</h2>
+<ul>
+  <li><strong>Sin valores nulos ni duplicados</strong> — el dataset está completo y listo para modelado sin imputación adicional</li>
+  <li><strong>Correlación moderada</strong> entre <em>credit_amount</em> y <em>duration</em> (r=0.625) — créditos más grandes tienen plazos más largos, lo cual es esperado</li>
+  <li><strong>liable_people presenta 15.5% de outliers</strong> — pero todos son valores válidos (máximo 2 personas), no errores de datos</li>
+  <li><strong>96.3% de clientes son trabajadores extranjeros</strong> — variable casi constante, muy bajo poder discriminante para clasificación</li>
+  <li><strong>Dataset desbalanceado:</strong> 70% riesgo bueno / 30% riesgo malo — impacta directamente las métricas de clasificación</li>
+</ul></div>
+
+<div class="two">
+  <div class="box"><h2>Estadísticas numéricas</h2>
+  <table><tr><th>Variable</th><th>Media</th><th>Std</th><th>Min</th><th>Mediana</th><th>Max</th></tr>
+  <tr><td>duration</td><td>20.90</td><td>12.06</td><td>4</td><td>18</td><td>72</td></tr>
+  <tr><td>credit_amount</td><td>3,271</td><td>2,823</td><td>250</td><td>2,320</td><td>18,424</td></tr>
+  <tr><td>installment_rate</td><td>2.97</td><td>1.12</td><td>1</td><td>3</td><td>4</td></tr>
+  <tr><td>age</td><td>35.55</td><td>11.38</td><td>19</td><td>33</td><td>75</td></tr>
+  <tr><td>existing_credits</td><td>1.41</td><td>0.58</td><td>1</td><td>1</td><td>4</td></tr>
+  <tr><td>liable_people</td><td>1.16</td><td>0.36</td><td>1</td><td>1</td><td>2</td></tr>
+  </table></div>
+
+  <div class="box"><h2>Outliers — método IQR</h2>
+  <table><tr><th>Variable</th><th>N</th><th>%</th><th>Interpretación</th></tr>
+  <tr><td>duration</td><td>70</td><td><span class="r">7.0%</span></td><td>Créditos de plazo muy largo (&gt;42 meses)</td></tr>
+  <tr><td>credit_amount</td><td>72</td><td><span class="r">7.2%</span></td><td>Montos altos (&gt;7,882 DM) — clientes premium</td></tr>
+  <tr><td>age</td><td>23</td><td><span class="g">2.3%</span></td><td>Clientes mayores de 64 años</td></tr>
+  <tr><td>liable_people</td><td>155</td><td><span class="r">15.5%</span></td><td>Valor válido = 2 personas dependientes</td></tr>
+  <tr><td>installment_rate</td><td>0</td><td><span class="g">0.0%</span></td><td>Sin outliers</td></tr>
+  <tr><td>existing_credits</td><td>6</td><td><span class="g">0.6%</span></td><td>Sin outliers significativos</td></tr>
+  </table></div>
+</div>
+
+<div class="box"><h2>Variables categóricas — distribución</h2>
+<table><tr><th>Variable</th><th>Categorías</th><th>Valor dominante</th><th>Frecuencia</th><th>Relevancia para el modelo</th></tr>
+<tr><td>foreign_worker</td><td>2</td><td>trabajador_extranjero</td><td><span class="r">96.3%</span></td><td>Muy baja — casi constante</td></tr>
+<tr><td>other_debtors</td><td>3</td><td>ninguno</td><td><span class="r">90.7%</span></td><td>Baja — mayoría sin deudores</td></tr>
+<tr><td>other_installments</td><td>3</td><td>ninguno</td><td>81.4%</td><td>Media</td></tr>
+<tr><td>housing</td><td>3</td><td>propietario</td><td>71.3%</td><td>Media — indicador de estabilidad</td></tr>
+<tr><td>risk</td><td>2</td><td>riesgo_bueno</td><td>70.0%</td><td>Target — desbalanceado 70/30</td></tr>
+<tr><td>credit_history</td><td>5</td><td>pagando_puntual</td><td>53.0%</td><td>Alta — fuerte predictor de riesgo</td></tr>
+<tr><td>checking_account</td><td>4</td><td>sin_cuenta</td><td>39.4%</td><td>Alta — relacionada con riesgo</td></tr>
+<tr><td>purpose</td><td>10</td><td>radio_tv</td><td>28.0%</td><td>Alta — mayor cardinalidad</td></tr>
+</table></div>
+
+<div class="warn"><h2>Limitación identificada</h2>
+<p>El desbalance del dataset (70% riesgo bueno / 30% riesgo malo) hace que los modelos de clasificación sean optimistas — tienden a predecir riesgo bueno con mayor precisión. Para aplicaciones reales se recomienda aplicar técnicas de balanceo como SMOTE o ajustar los pesos de clase.</p>
+</div>
+</div>
+</body></html>
