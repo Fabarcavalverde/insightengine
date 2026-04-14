@@ -1,12 +1,6 @@
-# src/utils/config.py
-
 import os
 import yaml
 
-# __file__ = C:\InsightEngine\src\utils\config.py
-# dirname x1 = src\utils
-# dirname x2 = src
-# dirname x3 = InsightEngine  ← raíz del proyecto
 BASE_DIR    = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 RAW_DIR     = os.path.join(BASE_DIR, "data", "raw")
 PROC_DIR    = os.path.join(BASE_DIR, "data", "processed")

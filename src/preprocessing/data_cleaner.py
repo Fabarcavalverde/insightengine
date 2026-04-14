@@ -1,5 +1,3 @@
-# src/preprocessing/data_cleaner.py
-
 import pandas as pd
 import numpy as np
 import os

@@ -3,7 +3,6 @@ from sklearn.linear_model import Lasso, Ridge
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
 
-# src/regularization/lasso_ridge.py
 
 import pandas as pd
 from sklearn.linear_model import Lasso, Ridge

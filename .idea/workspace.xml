@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="42334c8e-66ac-4f9b-bf4e-d66aa202d835" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/processed/01_ingestion.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/01_ingestion.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/processed/05_apriori.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/05_apriori.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/processed/07_tsne.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/07_tsne.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/processed/07_umap.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/processed/07_umap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dimensionality/pca_reducer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dimensionality/pca_reducer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/preprocessing/data_preparator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocessing/data_preparator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +97,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/InsightEngine$setup_project.coverage" NAME="setup_project Coverage Results" MODIFIED="1771902151988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/InsightEngine$script.coverage" NAME="script Coverage Results" MODIFIED="1771901975511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/InsightEngine$main.coverage" NAME="main Coverage Results" MODIFIED="1776135313303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/InsightEngine$main.coverage" NAME="main Coverage Results" MODIFIED="1776135547719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>

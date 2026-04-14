@@ -1,5 +1,3 @@
-# src/ingestion/data_loader.py
-
 import os
 import pandas as pd
 
