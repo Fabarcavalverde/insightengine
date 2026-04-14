@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>InsightEngine — Lasso / Ridge</title>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#f4f6fb;color:#1a1a2e}
+nav{background:#1E2761;padding:0 2rem;position:sticky;top:0;z-index:100}
+.nav-inner{display:flex;align-items:center;gap:0;max-width:1200px;margin:0 auto}
+.nav-inner::before{content:'InsightEngine';color:#4FC3F7;font-weight:700;font-size:1rem;margin-right:2rem;white-space:nowrap}
+nav a{color:#CADCFC;text-decoration:none;padding:.9rem 1rem;font-size:.85rem;display:inline-block;transition:color .2s}
+nav a:hover,nav a.active{color:#4FC3F7;border-bottom:2px solid #4FC3F7}
+.page{max-width:1200px;margin:2rem auto;padding:0 1.5rem 4rem}
+h1{font-size:1.6rem;font-weight:600;color:#1E2761;margin-bottom:.3rem}
+.subtitle{font-size:.9rem;color:#666;margin-bottom:2rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:2rem}
+.card{background:#1E2761;border-radius:10px;padding:1.2rem 1rem;text-align:center}
+.card-val{font-size:2rem;font-weight:700;color:#4FC3F7}
+.card-label{font-size:.78rem;color:#CADCFC;margin-top:.2rem}
+.section{background:white;border-radius:12px;padding:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.07);margin-bottom:1.5rem}
+.section h2{font-size:1rem;font-weight:600;color:#1E2761;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #e8ecf5}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th{background:#1E2761;color:white;padding:.6rem .8rem;text-align:left;font-weight:500}
+td{padding:.55rem .8rem;border-bottom:1px solid #eef0f7}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#f8f9ff}
+.badge{display:inline-block;padding:.2rem .6rem;border-radius:20px;font-size:.75rem;font-weight:600}
+.badge-green{background:#e8f5e9;color:#2e7d32}
+.badge-blue{background:#e3f2fd;color:#1565c0}
+.badge-red{background:#fce4ec;color:#c62828}
+.rec-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.rec-card{border-left:4px solid #4FC3F7;background:#f8f9ff;border-radius:0 8px 8px 0;padding:1rem 1.2rem}
+.rec-card h3{font-size:.9rem;font-weight:600;color:#1E2761;margin-bottom:.3rem}
+.rec-rule{font-size:.78rem;color:#5c6bc0;background:#e8eaf6;padding:.25rem .5rem;border-radius:4px;margin-bottom:.5rem;display:inline-block}
+.rec-card p{font-size:.83rem;color:#444;line-height:1.5}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:700px){.rec-grid,.two-col{grid-template-columns:1fr}}
+</style></head><body>
+<nav><div class="nav-inner"><a href="index.html" class="">Resumen</a><a href="eda.html" class="">EDA</a><a href="apriori.html" class="">Apriori</a><a href="eclat.html" class="">ECLAT</a><a href="classification.html" class="">Clasificación</a><a href="dimensionality.html" class="">Dimensionalidad</a><a href="lasso_ridge.html" class="active">Lasso / Ridge</a></div></nav>
+<div class="page"><h1>Lasso / Ridge</h1>
+        <p class="subtitle">Predicción de monto de crédito (credit_amount)</p>
+        <div class="cards">
+          <div class="card"><div class="card-val">0.5213</div><div class="card-label">R² Lasso</div></div>
+          <div class="card"><div class="card-val">2912128.0959</div><div class="card-label">MSE Lasso</div></div>
+          <div class="card"><div class="card-val">0.5206</div><div class="card-label">R² Ridge</div></div>
+          <div class="card"><div class="card-val">2916857.3043</div><div class="card-label">MSE Ridge</div></div>
+        </div>
+        <div class="section"><h2>Recomendaciones de negocio</h2>
+          <p class="subtitle" style="margin-bottom:1rem">Basadas en reglas con lift &gt; 1.0 y confianza &gt; 0.60</p>
+          <div class="rec-grid"><div class="rec-card" style="border-left-color:#1565C0">
+          <h3>Aprobar sin cuenta bancaria</h3><span class="rec-rule">sin_cuenta + vivienda_propia → lift 1.082</span><p>Sin cuenta corriente no implica alto riesgo si hay vivienda propia. Ofrecer crédito sin exigir cuenta previa.</p></div><div class="rec-card" style="border-left-color:#1B5E20">
+          <h3>Perfil preferencial — empleado estable</h3><span class="rec-rule">empleado_calificado + sin_deudores → lift 1.020</span><p>Empleados calificados sin deudores representan el menor riesgo. Tasas preferenciales automáticas.</p></div><div class="rec-card" style="border-left-color:#4A148C">
+          <h3>Segmento trabajador extranjero</h3><span class="rec-rule">trabajador_extranjero + sin_otros_planes (96%)</span><p>Segmento mayoritario, confiable y subatendido. Oportunidad de productos especializados.</p></div><div class="rec-card" style="border-left-color:#B71C1C">
+          <h3>Alerta de riesgo combinado</h3><span class="rec-rule">saldo_negativo + pagos_atrasados</span><p>Requieren revisión manual antes de aprobación, sin excepción.</p></div></div>
+        </div></div>
+</body></html>

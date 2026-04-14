@@ -5,7 +5,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from utils.config import load_config, RAW_DIR, PROC_DIR
+from utils.config import load_config, RAW_DIR, PROC_DIR, OUT_DIR
 from utils.json_saver import save_json
 from utils.apply_mappings import apply_mappings
 from ingestion.data_loader import data_loader
@@ -26,8 +26,11 @@ from reporting.html_exporter import html_exporter
 _state = {}
 
 
-def _ok(paso, archivo):
-    print(f"  [OK] Paso {paso} completado — guardado en data/processed/{archivo}")
+def _ok(paso, detalle=""):
+    msg = f"  [OK] Paso {paso} completado"
+    if detalle:
+        msg += f" — {detalle}"
+    print(msg)
 
 
 def paso_1_carga(cfg):
@@ -41,6 +44,7 @@ def paso_1_carga(cfg):
 
     _state["df"]   = df
     _state["dcfg"] = dcfg
+    _state["ingestion"] = {"filas": df.shape[0], "columnas": df.shape[1]}
 
     save_json({
         "filas": df.shape[0],
@@ -49,29 +53,29 @@ def paso_1_carga(cfg):
         "muestra": df.head(5).to_dict(orient="records")
     }, "01_ingestion.json", PROC_DIR)
 
-    _ok("1", "01_ingestion.json")
+    _ok("1 — Carga", f"{df.shape[0]} filas · {df.shape[1]} columnas")
 
 
 def paso_2_eda(cfg):
-    ecfg = cfg["eda"]
-
     import contextlib, io
-    with contextlib.redirect_stdout(io.StringIO()):
+    ecfg = cfg["eda"]
+    buf  = io.StringIO()
+    with contextlib.redirect_stdout(buf):
         eda     = exploratory_analysis(_state["df"], output_dir=ecfg["output_dir"])
         results = eda.run_full_analysis(
             output_plots=ecfg["output_plots"],
             cardinality_threshold=ecfg["cardinality_threshold"]
         )
-
+    _state["eda_results"] = results
     save_json(results, "02_eda.json", PROC_DIR)
-    _ok("2", "02_eda.json  +  eda/exploratory_analysis.html")
+    _ok("2 — EDA", "estadísticas guardadas en memoria")
 
 
 def paso_3_limpieza(cfg):
-    dcfg = _state["dcfg"]
-
     import contextlib, io
-    with contextlib.redirect_stdout(io.StringIO()):
+    dcfg = _state["dcfg"]
+    buf  = io.StringIO()
+    with contextlib.redirect_stdout(buf):
         cleaner = data_cleaner(_state["df"])
         cleaner.drop_constant_columns()
         cleaner.drop_id_columns()
@@ -90,7 +94,7 @@ def paso_3_limpieza(cfg):
     _state["df_clean"] = df_clean
     _state["prep"]     = data_preparator(df_clean, target=dcfg["target"])
 
-    _ok("3", "(datos listos en memoria)")
+    _ok("3 — Limpieza", f"{df_clean.shape[0]} filas limpias")
 
 
 def paso_4_asociacion(cfg):
@@ -103,16 +107,19 @@ def paso_4_asociacion(cfg):
     ap          = Apriori(transacciones, min_support=acfg["apriori"]["min_support"])
     itemsets_ap = ap.fit()
     reglas_ap   = ap.get_rules(min_confidence=acfg["rules"]["min_confidence"])
+
+    _state["apriori"] = {"itemsets": itemsets_ap, "reglas": reglas_ap}
     save_json({
         "itemsets": itemsets_ap.to_dict(orient="records"),
         "reglas":   reglas_ap.to_dict(orient="records")
     }, "05_apriori.json", PROC_DIR)
-    _ok("4a", "05_apriori.json")
+    _ok("4a — Apriori", f"{len(itemsets_ap)} itemsets · {len(reglas_ap)} reglas")
 
     ec          = eclat(transacciones, min_support=acfg["eclat"]["min_support"])
     itemsets_ec = ec.fit()
+    _state["eclat"] = {"itemsets": itemsets_ec}
     save_json({"itemsets": itemsets_ec.to_dict(orient="records")}, "05_eclat.json", PROC_DIR)
-    _ok("4b", "05_eclat.json")
+    _ok("4b — ECLAT", f"{len(itemsets_ec)} itemsets")
 
 
 def paso_5_clasificacion(cfg):
@@ -125,9 +132,11 @@ def paso_5_clasificacion(cfg):
         train_size=ccfg["train_size"],
         random_state=ccfg["random_state"]
     )
-    resultados_clf = cm.run_all()
+    resultados_clf         = cm.run_all()
+    _state["clasificacion"] = resultados_clf
     save_json(resultados_clf, "06_classification.json", PROC_DIR)
-    _ok("5", "06_classification.json")
+    mejor = resultados_clf["PG"].idxmax()
+    _ok("5 — Clasificación", f"mejor: {mejor} ({resultados_clf.loc[mejor,'PG']:.2%})")
 
 
 def paso_6_dimensionalidad(cfg):
@@ -135,10 +144,10 @@ def paso_6_dimensionalidad(cfg):
     km     = dimcfg["kmeans"]
     df_dim = _state["prep"].for_dimensionality()
 
-    for nombre, Clase, kwargs in [
-        ("pca",  pca_reducer,  {}),
-        ("tsne", tsne_reducer, {"perplexity": dimcfg["tsne"]["perplexity"], "learning_rate": dimcfg["tsne"]["learning_rate"]}),
-        ("umap", umap_reducer, {"n_neighbors": dimcfg["umap"]["n_neighbors"]}),
+    for nombre, key, Clase, kwargs in [
+        ("ACP",   "pca",  pca_reducer,  {}),
+        ("t-SNE", "tsne", tsne_reducer, {"perplexity": dimcfg["tsne"]["perplexity"], "learning_rate": dimcfg["tsne"]["learning_rate"]}),
+        ("UMAP",  "umap", umap_reducer, {"n_neighbors": dimcfg["umap"]["n_neighbors"]}),
     ]:
         result = Clase(
             df_dim,
@@ -149,8 +158,9 @@ def paso_6_dimensionalidad(cfg):
             random_state=km["random_state"],
             **kwargs
         ).fit()
-        save_json({"resultado": result}, f"07_{nombre}.json", PROC_DIR)
-        _ok(f"6 ({nombre.upper()})", f"07_{nombre}.json")
+        _state[key] = result
+        save_json({"resultado": result}, f"07_{key}.json", PROC_DIR)
+        _ok(f"6 — {nombre}")
 
 
 def paso_7_regularizacion(cfg):
@@ -158,15 +168,21 @@ def paso_7_regularizacion(cfg):
     prep_r = data_preparator(_state["df_clean"], target=rcfg["target_numerico"])
     X, y   = prep_r.for_regularization()
     lr     = lasso_ridge(alpha=rcfg["alpha"], test_size=rcfg["test_size"])
-    resultados = lr.run(X, y)
+    resultados              = lr.run(X, y)
+    _state["regularizacion"] = resultados
     save_json(resultados, "08_lasso_ridge.json", PROC_DIR)
-    _ok("7", "08_lasso_ridge.json")
+    _ok("7 — Lasso/Ridge", f"R² Lasso={resultados['lasso']['r2']} · R² Ridge={resultados['ridge']['r2']}")
 
 
 def paso_html(cfg):
-    exporter = html_exporter(proc_dir=PROC_DIR, eda_dir=cfg["eda"]["output_dir"])
+    print("  Generando HTML...")
+    exporter = html_exporter(
+        out_dir      = OUT_DIR,
+        eda_results  = _state.get("eda_results", {}),
+        datos        = _state
+    )
     exporter.export_all()
-    _ok("HTML", "../outputs/  (todas las páginas generadas)")
+    _ok("H — HTML", f"outputs/ (7 páginas generadas)")
 
 
 # ── menú ────────────────────────────────────────────────────────────
@@ -187,6 +203,7 @@ DEPENDENCIAS = {
     "5": ["1", "3"],
     "6": ["1", "3"],
     "7": ["1", "3"],
+    "H": ["4"],
 }
 
 
@@ -197,6 +214,8 @@ def verificar_dependencias(opcion):
         faltantes.append("Paso 1 — Carga")
     if "3" in reqs and "df_clean" not in _state:
         faltantes.append("Paso 3 — Limpieza")
+    if "4" in reqs and "apriori" not in _state:
+        faltantes.append("Paso 4 — Asociación")
     return faltantes
 
 
@@ -205,7 +224,13 @@ def mostrar_menu():
     print("  InsightEngine — Pipeline de Minería")
     print("="*45)
     for k, (nombre, _) in PASOS.items():
-        print(f"  {k}. {nombre}")
+        estado = " ✓" if k == "1" and "df" in _state else \
+                 " ✓" if k == "3" and "df_clean" in _state else \
+                 " ✓" if k == "4" and "apriori" in _state else \
+                 " ✓" if k == "5" and "clasificacion" in _state else \
+                 " ✓" if k == "6" and "pca" in _state else \
+                 " ✓" if k == "7" and "regularizacion" in _state else ""
+        print(f"  {k}. {nombre}{estado}")
     print("  T. Ejecutar todo el pipeline")
     print("  H. Generar reporte HTML")
     print("  Q. Salir")
@@ -217,7 +242,10 @@ def main():
 
     while True:
         mostrar_menu()
-        opcion = input("  Selecciona una opción: ").strip().upper()
+        try:
+            opcion = input("  Selecciona una opción: ").strip().upper()
+        except (UnicodeDecodeError, EOFError):
+            continue
 
         if opcion == "Q":
             print("  Saliendo...")
@@ -230,7 +258,11 @@ def main():
             print("\n  Pipeline completado.")
 
         elif opcion == "H":
-            paso_html(cfg)
+            faltantes = verificar_dependencias("H")
+            if faltantes:
+                print(f"\n  Primero ejecuta: {', '.join(faltantes)}")
+            else:
+                paso_html(cfg)
 
         elif opcion in PASOS:
             faltantes = verificar_dependencias(opcion)

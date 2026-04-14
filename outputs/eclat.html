@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>InsightEngine — ECLAT</title>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#f4f6fb;color:#1a1a2e}
+nav{background:#1E2761;padding:0 2rem;position:sticky;top:0;z-index:100}
+.nav-inner{display:flex;align-items:center;gap:0;max-width:1200px;margin:0 auto}
+.nav-inner::before{content:'InsightEngine';color:#4FC3F7;font-weight:700;font-size:1rem;margin-right:2rem;white-space:nowrap}
+nav a{color:#CADCFC;text-decoration:none;padding:.9rem 1rem;font-size:.85rem;display:inline-block;transition:color .2s}
+nav a:hover,nav a.active{color:#4FC3F7;border-bottom:2px solid #4FC3F7}
+.page{max-width:1200px;margin:2rem auto;padding:0 1.5rem 4rem}
+h1{font-size:1.6rem;font-weight:600;color:#1E2761;margin-bottom:.3rem}
+.subtitle{font-size:.9rem;color:#666;margin-bottom:2rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:2rem}
+.card{background:#1E2761;border-radius:10px;padding:1.2rem 1rem;text-align:center}
+.card-val{font-size:2rem;font-weight:700;color:#4FC3F7}
+.card-label{font-size:.78rem;color:#CADCFC;margin-top:.2rem}
+.section{background:white;border-radius:12px;padding:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.07);margin-bottom:1.5rem}
+.section h2{font-size:1rem;font-weight:600;color:#1E2761;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #e8ecf5}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th{background:#1E2761;color:white;padding:.6rem .8rem;text-align:left;font-weight:500}
+td{padding:.55rem .8rem;border-bottom:1px solid #eef0f7}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#f8f9ff}
+.badge{display:inline-block;padding:.2rem .6rem;border-radius:20px;font-size:.75rem;font-weight:600}
+.badge-green{background:#e8f5e9;color:#2e7d32}
+.badge-blue{background:#e3f2fd;color:#1565c0}
+.badge-red{background:#fce4ec;color:#c62828}
+.rec-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.rec-card{border-left:4px solid #4FC3F7;background:#f8f9ff;border-radius:0 8px 8px 0;padding:1rem 1.2rem}
+.rec-card h3{font-size:.9rem;font-weight:600;color:#1E2761;margin-bottom:.3rem}
+.rec-rule{font-size:.78rem;color:#5c6bc0;background:#e8eaf6;padding:.25rem .5rem;border-radius:4px;margin-bottom:.5rem;display:inline-block}
+.rec-card p{font-size:.83rem;color:#444;line-height:1.5}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:700px){.rec-grid,.two-col{grid-template-columns:1fr}}
+</style></head><body>
+<nav><div class="nav-inner"><a href="index.html" class="">Resumen</a><a href="eda.html" class="">EDA</a><a href="apriori.html" class="">Apriori</a><a href="eclat.html" class="active">ECLAT</a><a href="classification.html" class="">Clasificación</a><a href="dimensionality.html" class="">Dimensionalidad</a><a href="lasso_ridge.html" class="">Lasso / Ridge</a></div></nav>
+<div class="page"><h1>ECLAT</h1>
+        <p class="subtitle">144 itemsets — formato vertical (tidsets)</p>
+        <div class="cards">
+          <div class="card"><div class="card-val">144</div><div class="card-label">Itemsets</div></div>
+          <div class="card"><div class="card-val">300</div><div class="card-label">Soporte mín. (abs.)</div></div>
+        </div>
+        <div class="section"><h2>Top 20 itemsets</h2><div id="ce" style="height:440px"></div></div>
+        <div class="section"><h2>Tabla</h2>
+          <table><tr><th>Itemset</th><th>Soporte</th></tr><tr><td>frozenset({'foreign_worker_trabajador_extranjero'})</td><td>963</td></tr><tr><td>frozenset({'other_debtors_ninguno'})</td><td>907</td></tr><tr><td>frozenset({'foreign_worker_trabajador_extranjero', 'other_debtors_ninguno'})</td><td>880</td></tr><tr><td>frozenset({'other_installments_ninguno'})</td><td>814</td></tr><tr><td>frozenset({'foreign_worker_trabajador_extranjero', 'other_installments_ninguno'}</td><td>782</td></tr><tr><td>frozenset({'other_installments_ninguno', 'other_debtors_ninguno'})</td><td>742</td></tr><tr><td>frozenset({'foreign_worker_trabajador_extranjero', 'other_debtors_ninguno', 'oth</td><td>718</td></tr><tr><td>frozenset({'housing_propietario'})</td><td>713</td></tr><tr><td>frozenset({'foreign_worker_trabajador_extranjero', 'housing_propietario'})</td><td>685</td></tr><tr><td>frozenset({'housing_propietario', 'other_debtors_ninguno'})</td><td>647</td></tr><tr><td>frozenset({'job_empleado_calificado'})</td><td>630</td></tr><tr><td>frozenset({'foreign_worker_trabajador_extranjero', 'housing_propietario', 'other</td><td>625</td></tr><tr><td>frozenset({'job_empleado_calificado', 'foreign_worker_trabajador_extranjero'})</td><td>611</td></tr><tr><td>frozenset({'savings_account_ahorros_bajos'})</td><td>603</td></tr><tr><td>frozenset({'telephone_sin_telefono'})</td><td>596</td></tr><tr><td>frozenset({'savings_account_ahorros_bajos', 'foreign_worker_trabajador_extranjer</td><td>581</td></tr><tr><td>frozenset({'housing_propietario', 'other_installments_ninguno'})</td><td>576</td></tr><tr><td>frozenset({'job_empleado_calificado', 'other_debtors_ninguno'})</td><td>570</td></tr><tr><td>frozenset({'foreign_worker_trabajador_extranjero', 'telephone_sin_telefono'})</td><td>564</td></tr><tr><td>frozenset({'job_empleado_calificado', 'foreign_worker_trabajador_extranjero', 'o</td><td>558</td></tr></table>
+        </div>
+        <script>
+          Plotly.newPlot('ce',[{type:'bar',orientation:'h',x:[963, 907, 880, 814, 782, 742, 718, 713, 685, 647, 630, 625, 611, 603, 596, 581, 576, 570, 564, 558],y:["frozenset({'foreign_worker_trabajador_extranjero'})", "frozenset({'other_debtors_ninguno'})", "frozenset({'foreign_worker_trabajador_extranjero', 'oth", "frozenset({'other_installments_ninguno'})", "frozenset({'foreign_worker_trabajador_extranjero', 'oth", "frozenset({'other_installments_ninguno', 'other_debtors", "frozenset({'foreign_worker_trabajador_extranjero', 'oth", "frozenset({'housing_propietario'})", "frozenset({'foreign_worker_trabajador_extranjero', 'hou", "frozenset({'housing_propietario', 'other_debtors_ningun", "frozenset({'job_empleado_calificado'})", "frozenset({'foreign_worker_trabajador_extranjero', 'hou", "frozenset({'job_empleado_calificado', 'foreign_worker_t", "frozenset({'savings_account_ahorros_bajos'})", "frozenset({'telephone_sin_telefono'})", "frozenset({'savings_account_ahorros_bajos', 'foreign_wo", "frozenset({'housing_propietario', 'other_installments_n", "frozenset({'job_empleado_calificado', 'other_debtors_ni", "frozenset({'foreign_worker_trabajador_extranjero', 'tel", "frozenset({'job_empleado_calificado', 'foreign_worker_t"],marker:{color:'#5c6bc0'}}],
+            {margin:{l:320,r:20,t:10,b:40},xaxis:{title:'Soporte (nº transacciones)'},plot_bgcolor:'#fff',paper_bgcolor:'#fff'},{responsive:true});
+        </script></div>
+</body></html>

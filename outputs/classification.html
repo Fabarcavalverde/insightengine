@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>InsightEngine — Clasificación</title>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:#f4f6fb;color:#1a1a2e}
+nav{background:#1E2761;padding:0 2rem;position:sticky;top:0;z-index:100}
+.nav-inner{display:flex;align-items:center;gap:0;max-width:1200px;margin:0 auto}
+.nav-inner::before{content:'InsightEngine';color:#4FC3F7;font-weight:700;font-size:1rem;margin-right:2rem;white-space:nowrap}
+nav a{color:#CADCFC;text-decoration:none;padding:.9rem 1rem;font-size:.85rem;display:inline-block;transition:color .2s}
+nav a:hover,nav a.active{color:#4FC3F7;border-bottom:2px solid #4FC3F7}
+.page{max-width:1200px;margin:2rem auto;padding:0 1.5rem 4rem}
+h1{font-size:1.6rem;font-weight:600;color:#1E2761;margin-bottom:.3rem}
+.subtitle{font-size:.9rem;color:#666;margin-bottom:2rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:2rem}
+.card{background:#1E2761;border-radius:10px;padding:1.2rem 1rem;text-align:center}
+.card-val{font-size:2rem;font-weight:700;color:#4FC3F7}
+.card-label{font-size:.78rem;color:#CADCFC;margin-top:.2rem}
+.section{background:white;border-radius:12px;padding:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.07);margin-bottom:1.5rem}
+.section h2{font-size:1rem;font-weight:600;color:#1E2761;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #e8ecf5}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th{background:#1E2761;color:white;padding:.6rem .8rem;text-align:left;font-weight:500}
+td{padding:.55rem .8rem;border-bottom:1px solid #eef0f7}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#f8f9ff}
+.badge{display:inline-block;padding:.2rem .6rem;border-radius:20px;font-size:.75rem;font-weight:600}
+.badge-green{background:#e8f5e9;color:#2e7d32}
+.badge-blue{background:#e3f2fd;color:#1565c0}
+.badge-red{background:#fce4ec;color:#c62828}
+.rec-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.rec-card{border-left:4px solid #4FC3F7;background:#f8f9ff;border-radius:0 8px 8px 0;padding:1rem 1.2rem}
+.rec-card h3{font-size:.9rem;font-weight:600;color:#1E2761;margin-bottom:.3rem}
+.rec-rule{font-size:.78rem;color:#5c6bc0;background:#e8eaf6;padding:.25rem .5rem;border-radius:4px;margin-bottom:.5rem;display:inline-block}
+.rec-card p{font-size:.83rem;color:#444;line-height:1.5}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:700px){.rec-grid,.two-col{grid-template-columns:1fr}}
+</style></head><body>
+<nav><div class="nav-inner"><a href="index.html" class="">Resumen</a><a href="eda.html" class="">EDA</a><a href="apriori.html" class="">Apriori</a><a href="eclat.html" class="">ECLAT</a><a href="classification.html" class="active">Clasificación</a><a href="dimensionality.html" class="">Dimensionalidad</a><a href="lasso_ridge.html" class="">Lasso / Ridge</a></div></nav>
+<div class="page"><h1>Clasificación</h1>
+        <p class="subtitle">12 modelos — train 70% / test 30%</p>
+        <div class="section"><h2>Precisión global por modelo</h2><div id="cc" style="height:420px"></div></div>
+        <div class="section"><h2>Tabla comparativa</h2>
+          <table><tr><th>Modelo</th><th>PG</th><th>Error</th><th>riesgo_bueno</th><th>riesgo_malo</th></tr><tr><td>KNN</td><td><span class='badge badge-blue'>0.7233</span></td><td>0.2767</td><td>0.8517</td><td>0.4286</td></tr><tr><td>SVM_RBF</td><td><span class='badge badge-blue'>0.7633</span></td><td>0.2367</td><td>0.9474</td><td>0.3407</td></tr><tr><td>SVM_Poly</td><td><span class='badge badge-blue'>0.7067</span></td><td>0.2933</td><td>0.8421</td><td>0.3956</td></tr><tr><td>SVM_Sigmoid</td><td><span class='badge badge-blue'>0.76</span></td><td>0.24</td><td>0.9091</td><td>0.4176</td></tr><tr><td>Tree_Entropy</td><td><span class='badge badge-blue'>0.71</span></td><td>0.29</td><td>0.933</td><td>0.1978</td></tr><tr><td>Tree_Gini</td><td><span class='badge badge-blue'>0.71</span></td><td>0.29</td><td>0.933</td><td>0.1978</td></tr><tr><td>GradientBoosting</td><td><span class='badge badge-blue'>0.7367</span></td><td>0.2633</td><td>0.8565</td><td>0.4615</td></tr><tr><td>RandomForest</td><td><span class='badge badge-blue'>0.7633</span></td><td>0.2367</td><td>0.9522</td><td>0.3297</td></tr><tr><td>AdaBoost</td><td><span class='badge badge-green'>0.78</span></td><td>0.22</td><td>0.9522</td><td>0.3846</td></tr><tr><td>NaiveBayes</td><td><span class='badge badge-blue'>0.7033</span></td><td>0.2967</td><td>0.689</td><td>0.7363</td></tr><tr><td>LDA</td><td><span class='badge badge-blue'>0.7767</span></td><td>0.2233</td><td>0.9043</td><td>0.4835</td></tr><tr><td>QDA</td><td><span class='badge badge-blue'>0.7133</span></td><td>0.2867</td><td>0.7608</td><td>0.6044</td></tr></table>
+        </div>
+        <script>
+          Plotly.newPlot('cc',[{type:'bar',x:['KNN', 'SVM_RBF', 'SVM_Poly', 'SVM_Sigmoid', 'Tree_Entropy', 'Tree_Gini', 'GradientBoosting', 'RandomForest', 'AdaBoost', 'NaiveBayes', 'LDA', 'QDA'],y:[0.7233, 0.7633, 0.7067, 0.76, 0.71, 0.71, 0.7367, 0.7633, 0.78, 0.7033, 0.7767, 0.7133],marker:{color:['#1E2761', '#1E2761', '#1E2761', '#1E2761', '#1E2761', '#1E2761', '#1E2761', '#1E2761', '#4FC3F7', '#1E2761', '#1E2761', '#1E2761']}}],
+            {yaxis:{title:'Precisión Global',range:[0.5,1.0]},margin:{l:60,r:20,t:10,b:100},plot_bgcolor:'#fff',paper_bgcolor:'#fff'},{responsive:true});
+        </script></div>
+</body></html>
