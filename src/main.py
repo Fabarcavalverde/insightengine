@@ -5,7 +5,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from src.utils.config import load_config, RAW_DIR, PROC_DIR
+from utils.config import load_config, RAW_DIR, PROC_DIR
 from utils.json_saver import save_json
 from utils.apply_mappings import apply_mappings
 from ingestion.data_loader import data_loader
@@ -19,24 +19,28 @@ from dimensionality.pca_reducer import pca_reducer
 from dimensionality.tsne_reducer import tsne_reducer
 from dimensionality.umap_reducer import umap_reducer
 from regularization.lasso_ridge import lasso_ridge
+from reporting.html_exporter import html_exporter
 
 
-def main():
-    cfg    = load_config()
+# ── estado compartido entre pasos ──────────────────────────────────
+_state = {}
+
+
+def _ok(paso, archivo):
+    print(f"  [OK] Paso {paso} completado — guardado en data/processed/{archivo}")
+
+
+def paso_1_carga(cfg):
     dcfg   = cfg["data"]
-    acfg   = cfg["association"]
-    ccfg   = cfg["classification"]
-    dimcfg = cfg["dimensionality"]
-    rcfg   = cfg["regularization"]
-    ecfg   = cfg["eda"]
-    km     = dimcfg["kmeans"]
-
-    # ----------------------------------------------------------------
-    # 1. carga de datos
-    # ----------------------------------------------------------------
     loader = data_loader(RAW_DIR)
     df     = loader.load(dcfg)
-    print(f"Dataset cargado: {df.shape[0]} filas, {df.shape[1]} columnas")
+
+    mappings = cfg.get("column_mappings", {})
+    if mappings:
+        df = apply_mappings(df, mappings)
+
+    _state["df"]   = df
+    _state["dcfg"] = dcfg
 
     save_json({
         "filas": df.shape[0],
@@ -45,25 +49,35 @@ def main():
         "muestra": df.head(5).to_dict(orient="records")
     }, "01_ingestion.json", PROC_DIR)
 
-    # ----------------------------------------------------------------
-    # 2. mapeo de columnas — antes de limpiar y del EDA
-    # ----------------------------------------------------------------
-    mappings = cfg.get("column_mappings", {})
-    if mappings:
-        print("\n--- Aplicando mapeo de columnas ---")
-        df = apply_mappings(df, mappings)
-        print(df[["checking_account", "credit_history", "housing"]].head(3))
+    _ok("1", "01_ingestion.json")
 
-    # ----------------------------------------------------------------
-    # 3. limpieza
-    # ----------------------------------------------------------------
-    print("\n--- Limpieza ---")
-    cleaner = data_cleaner(df)
-    cleaner.drop_constant_columns()
-    cleaner.drop_id_columns()
-    cleaner.remove_duplicates()
-    cleaner.impute_numeric(strategy="median")
-    cleaner.impute_categorical(strategy="mode")
+
+def paso_2_eda(cfg):
+    ecfg = cfg["eda"]
+
+    import contextlib, io
+    with contextlib.redirect_stdout(io.StringIO()):
+        eda     = exploratory_analysis(_state["df"], output_dir=ecfg["output_dir"])
+        results = eda.run_full_analysis(
+            output_plots=ecfg["output_plots"],
+            cardinality_threshold=ecfg["cardinality_threshold"]
+        )
+
+    save_json(results, "02_eda.json", PROC_DIR)
+    _ok("2", "02_eda.json  +  eda/exploratory_analysis.html")
+
+
+def paso_3_limpieza(cfg):
+    dcfg = _state["dcfg"]
+
+    import contextlib, io
+    with contextlib.redirect_stdout(io.StringIO()):
+        cleaner = data_cleaner(_state["df"])
+        cleaner.drop_constant_columns()
+        cleaner.drop_id_columns()
+        cleaner.remove_duplicates()
+        cleaner.impute_numeric(strategy="median")
+        cleaner.impute_categorical(strategy="mode")
 
     for col, reemplazos in dcfg.get("typos", {}).items():
         for malo, bueno in reemplazos.items():
@@ -72,121 +86,161 @@ def main():
     if dcfg.get("drop_na"):
         cleaner.df = cleaner.df.dropna()
 
-    df_clean = cleaner.get_clean_dataframe()
-    print(f"Dataset limpio: {df_clean.shape[0]} filas, {df_clean.shape[1]} columnas")
+    df_clean           = cleaner.get_clean_dataframe()
+    _state["df_clean"] = df_clean
+    _state["prep"]     = data_preparator(df_clean, target=dcfg["target"])
 
-    # ----------------------------------------------------------------
-    # 4. EDA — sobre datos limpios y mapeados
-    # ----------------------------------------------------------------
-    print("\n--- EDA ---")
-    eda     = exploratory_analysis(df_clean, output_dir=ecfg["output_dir"])
-    results = eda.run_full_analysis(
-        output_plots=ecfg["output_plots"],
-        cardinality_threshold=ecfg["cardinality_threshold"]
-    )
-    save_json(results, "02_eda.json", PROC_DIR)
+    _ok("3", "(datos listos en memoria)")
 
-    # ----------------------------------------------------------------
-    # 5. preparador central
-    # ----------------------------------------------------------------
-    prep = data_preparator(df_clean, target=dcfg["target"])
 
-    # ----------------------------------------------------------------
-    # 6. asociación
-    # ----------------------------------------------------------------
+def paso_4_asociacion(cfg):
+    acfg          = cfg["association"]
+    dcfg          = _state["dcfg"]
+    prep          = _state["prep"]
     columnas_asoc = dcfg.get("columnas_asociacion") or None
     transacciones = prep.for_association(columnas=columnas_asoc)
 
-    print("\n--- Apriori: itemsets frecuentes ---")
     ap          = Apriori(transacciones, min_support=acfg["apriori"]["min_support"])
     itemsets_ap = ap.fit()
-    print(itemsets_ap)
-
-    print("\n--- Apriori: reglas de asociación ---")
-    reglas_ap = ap.get_rules(min_confidence=acfg["rules"]["min_confidence"])
-    print(reglas_ap)
-
+    reglas_ap   = ap.get_rules(min_confidence=acfg["rules"]["min_confidence"])
     save_json({
         "itemsets": itemsets_ap.to_dict(orient="records"),
         "reglas":   reglas_ap.to_dict(orient="records")
     }, "05_apriori.json", PROC_DIR)
+    _ok("4a", "05_apriori.json")
 
-    print("\n--- ECLAT: itemsets frecuentes ---")
     ec          = eclat(transacciones, min_support=acfg["eclat"]["min_support"])
     itemsets_ec = ec.fit()
-    print(itemsets_ec)
+    save_json({"itemsets": itemsets_ec.to_dict(orient="records")}, "05_eclat.json", PROC_DIR)
+    _ok("4b", "05_eclat.json")
 
-    save_json({
-        "itemsets": itemsets_ec.to_dict(orient="records")
-    }, "05_eclat.json", PROC_DIR)
 
-    # ----------------------------------------------------------------
-    # 7. clasificación
-    # ----------------------------------------------------------------
-    print("\n--- Clasificación ---")
-    cm             = classification(
+def paso_5_clasificacion(cfg):
+    ccfg = cfg["classification"]
+    dcfg = _state["dcfg"]
+    prep = _state["prep"]
+    cm   = classification(
         prep.for_classification(),
         target=dcfg["target"],
         train_size=ccfg["train_size"],
         random_state=ccfg["random_state"]
     )
     resultados_clf = cm.run_all()
-    print(resultados_clf.to_string())
-
     save_json(resultados_clf, "06_classification.json", PROC_DIR)
+    _ok("5", "06_classification.json")
 
-    # ----------------------------------------------------------------
-    # 8. reducción de dimensiones
-    # ----------------------------------------------------------------
-    df_dim = prep.for_dimensionality()
 
-    print("\n--- ACP ---")
-    pca_result = pca_reducer(
-        df_dim, n_components=dimcfg["n_components"],
-        n_clusters=dimcfg["n_clusters"], max_iter=km["max_iter"],
-        n_init=km["n_init"], random_state=km["random_state"]
-    ).fit()
-    print(pca_result)
-    save_json({"resultado": pca_result}, "07_pca.json", PROC_DIR)
+def paso_6_dimensionalidad(cfg):
+    dimcfg = cfg["dimensionality"]
+    km     = dimcfg["kmeans"]
+    df_dim = _state["prep"].for_dimensionality()
 
-    print("\n--- t-SNE ---")
-    tsne_result = tsne_reducer(
-        df_dim, n_components=dimcfg["n_components"],
-        perplexity=dimcfg["tsne"]["perplexity"],
-        learning_rate=dimcfg["tsne"]["learning_rate"],
-        n_clusters=dimcfg["n_clusters"], max_iter=km["max_iter"],
-        n_init=km["n_init"], random_state=km["random_state"]
-    ).fit()
-    print(tsne_result)
-    save_json({"resultado": tsne_result}, "07_tsne.json", PROC_DIR)
+    for nombre, Clase, kwargs in [
+        ("pca",  pca_reducer,  {}),
+        ("tsne", tsne_reducer, {"perplexity": dimcfg["tsne"]["perplexity"], "learning_rate": dimcfg["tsne"]["learning_rate"]}),
+        ("umap", umap_reducer, {"n_neighbors": dimcfg["umap"]["n_neighbors"]}),
+    ]:
+        result = Clase(
+            df_dim,
+            n_components=dimcfg["n_components"],
+            n_clusters=dimcfg["n_clusters"],
+            max_iter=km["max_iter"],
+            n_init=km["n_init"],
+            random_state=km["random_state"],
+            **kwargs
+        ).fit()
+        save_json({"resultado": result}, f"07_{nombre}.json", PROC_DIR)
+        _ok(f"6 ({nombre.upper()})", f"07_{nombre}.json")
 
-    print("\n--- UMAP ---")
-    umap_result = umap_reducer(
-        df_dim, n_components=dimcfg["n_components"],
-        n_neighbors=dimcfg["umap"]["n_neighbors"],
-        n_clusters=dimcfg["n_clusters"], max_iter=km["max_iter"],
-        n_init=km["n_init"], random_state=km["random_state"]
-    ).fit()
-    print(umap_result)
-    save_json({"resultado": umap_result}, "07_umap.json", PROC_DIR)
 
-    # ----------------------------------------------------------------
-    # 9. Lasso y Ridge
-    # ----------------------------------------------------------------
-    print("\n--- Lasso y Ridge ---")
-    prep_r        = data_preparator(df_clean, target=rcfg["target_numerico"])
-    X, y          = prep_r.for_regularization()
-    lr            = lasso_ridge(alpha=rcfg["alpha"], test_size=rcfg["test_size"])
-    resultados_lr = lr.run(X, y)
+def paso_7_regularizacion(cfg):
+    rcfg   = cfg["regularization"]
+    prep_r = data_preparator(_state["df_clean"], target=rcfg["target_numerico"])
+    X, y   = prep_r.for_regularization()
+    lr     = lasso_ridge(alpha=rcfg["alpha"], test_size=rcfg["test_size"])
+    resultados = lr.run(X, y)
+    save_json(resultados, "08_lasso_ridge.json", PROC_DIR)
+    _ok("7", "08_lasso_ridge.json")
 
-    for nombre, metricas in resultados_lr.items():
-        print(f"\n{nombre.upper()}")
-        for metrica, valor in metricas.items():
-            print(f"  {metrica.upper()}: {valor}")
 
-    save_json(resultados_lr, "08_lasso_ridge.json", PROC_DIR)
+def paso_html(cfg):
+    exporter = html_exporter(proc_dir=PROC_DIR, eda_dir=cfg["eda"]["output_dir"])
+    exporter.export_all()
+    _ok("HTML", "../outputs/  (todas las páginas generadas)")
 
-    print("\nPipeline completado. JSONs guardados en data/processed/")
+
+# ── menú ────────────────────────────────────────────────────────────
+PASOS = {
+    "1": ("Carga + mapeo de columnas",    paso_1_carga),
+    "2": ("EDA",                          paso_2_eda),
+    "3": ("Limpieza",                     paso_3_limpieza),
+    "4": ("Asociación (Apriori + ECLAT)", paso_4_asociacion),
+    "5": ("Clasificación",                paso_5_clasificacion),
+    "6": ("Reducción de dimensiones",     paso_6_dimensionalidad),
+    "7": ("Lasso y Ridge",                paso_7_regularizacion),
+}
+
+DEPENDENCIAS = {
+    "2": ["1"],
+    "3": ["1"],
+    "4": ["1", "3"],
+    "5": ["1", "3"],
+    "6": ["1", "3"],
+    "7": ["1", "3"],
+}
+
+
+def verificar_dependencias(opcion):
+    reqs = DEPENDENCIAS.get(opcion, [])
+    faltantes = []
+    if "1" in reqs and "df" not in _state:
+        faltantes.append("Paso 1 — Carga")
+    if "3" in reqs and "df_clean" not in _state:
+        faltantes.append("Paso 3 — Limpieza")
+    return faltantes
+
+
+def mostrar_menu():
+    print("\n" + "="*45)
+    print("  InsightEngine — Pipeline de Minería")
+    print("="*45)
+    for k, (nombre, _) in PASOS.items():
+        print(f"  {k}. {nombre}")
+    print("  T. Ejecutar todo el pipeline")
+    print("  H. Generar reporte HTML")
+    print("  Q. Salir")
+    print("="*45)
+
+
+def main():
+    cfg = load_config()
+
+    while True:
+        mostrar_menu()
+        opcion = input("  Selecciona una opción: ").strip().upper()
+
+        if opcion == "Q":
+            print("  Saliendo...")
+            break
+
+        elif opcion == "T":
+            print("\n  Ejecutando pipeline completo...\n")
+            for _, fn in PASOS.values():
+                fn(cfg)
+            print("\n  Pipeline completado.")
+
+        elif opcion == "H":
+            paso_html(cfg)
+
+        elif opcion in PASOS:
+            faltantes = verificar_dependencias(opcion)
+            if faltantes:
+                print(f"\n  Primero ejecuta: {', '.join(faltantes)}")
+            else:
+                PASOS[opcion][1](cfg)
+
+        else:
+            print("  Opción no válida.")
 
 
 if __name__ == "__main__":

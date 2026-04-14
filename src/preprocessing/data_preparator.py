@@ -11,7 +11,7 @@ class data_preparator:
         Centraliza encoding, estandarización y formato transaccional.
 
     Uso:
-        prep = DataPreparator(df, target="risk")
+        prep = DataPreparator(df, target="columna objetivo")
         transacciones  = prep.for_association()
         df_clf         = prep.for_classification()
         df_dim         = prep.for_dimensionality()
@@ -24,10 +24,8 @@ class data_preparator:
 
         Parámetros:
             datos (pd.DataFrame): Dataset limpio.
-            target (str | None): Columna a predecir o excluir según el módulo.
+            target (str): Columna a predecir o excluir según el módulo.
 
-        Retorna:
-            None
         """
         self.datos  = datos.copy()
         self.target = target

@@ -36,8 +36,6 @@ class pca_reducer:
             n_init (int): Semillas distintas para K-Medias.
             random_state (int): Semilla de reproducibilidad.
 
-        Retorna:
-            None
         """
         self.datos        = datos
         self.n_components = n_components
