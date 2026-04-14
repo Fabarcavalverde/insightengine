@@ -1,10 +1,12 @@
 # InsightEngine
 
-Pipeline de minería de datos orientado a objetos para descubrimiento de patrones de asociación, reducción de dimensiones y regularización.
+Pipeline de minería de datos orientado a objetos para descubrimiento de patrones de asociación y generación de reglas de recomendación para el negocio.
 
 **Curso:** Minería de Datos II — BD-162  
 **Institución:** Colegio Universitario de Cartago  
-**Grupo:** #1 — Abarca Valverde Fiorella · Contreras Artavia Fernando · Barquero Carvajal Johel
+**Grupo:** #1 — Abarca Valverde Fiorella · Contreras Artavia Fernando · Barquero Carvajal Johel  
+**Entrega:** 14 de abril de 2026
+
 ---
 
 ## Estructura del proyecto
@@ -13,160 +15,248 @@ Pipeline de minería de datos orientado a objetos para descubrimiento de patrone
 InsightEngine/
 │
 ├── data/
-│   ├── raw/                        # Datasets originales sin modificar
-│   └── processed/                  # Outputs intermedios del pipeline
+│   ├── raw/                         # Datasets originales sin modificar
+│   └── processed/                   # Outputs del pipeline (generados, no subir a git)
 │
 ├── src/
 │   ├── __init__.py
-│   ├── main.py                     # Entry point — orquesta todo el pipeline
+│   ├── main.py                      # Entry point — menú interactivo
 │   │
 │   ├── ingestion/
 │   │   ├── __init__.py
-│   │   └── data_loader.py          # Paso 1: carga de datos
+│   │   └── data_loader.py           # Paso 1: carga de datos
 │   │
 │   ├── eda/
 │   │   ├── __init__.py
-│   │   └── exploratory_analysis.py # Paso 2: análisis exploratorio
+│   │   └── exploratory_analysis.py  # Paso 2: estadísticas y visualizaciones
 │   │
 │   ├── preprocessing/
 │   │   ├── __init__.py
-│   │   └── data_cleaner.py         # Paso 3: limpieza y transformación
+│   │   ├── data_cleaner.py          # Paso 3: limpieza e imputación
+│   │   └── data_preparator.py       # Paso 4: transformación por módulo
 │   │
 │   ├── association/
 │   │   ├── __init__.py
-│   │   ├── apriori.py              # Paso 5.1: algoritmo Apriori
-│   │   └── eclat.py                # Paso 5.2: algoritmo ECLAT
+│   │   ├── apriori.py               # Paso 5.1: itemsets frecuentes con Apriori
+│   │   └── eclat.py                 # Paso 5.2: itemsets frecuentes con ECLAT
 │   │
 │   ├── classification/
 │   │   ├── __init__.py
-│   │   ├── predictive_analysis.py  # Clase base AnalisisPredictivo
-│   │   └── classification_models.py# Naive Bayes, LDA, QDA, KNN
+│   │   └── classification.py        # Paso 6: KNN, SVM, árboles, NaiveBayes, LDA, QDA
 │   │
 │   ├── dimensionality/
 │   │   ├── __init__.py
-│   │   ├── pca_reducer.py          # Paso 7.1: ACP
-│   │   ├── tsne_reducer.py         # Paso 7.2: t-SNE
-│   │   └── umap_reducer.py         # Paso 7.3: UMAP
+│   │   ├── pca_reducer.py           # Paso 7.1: ACP
+│   │   ├── tsne_reducer.py          # Paso 7.2: t-SNE
+│   │   └── umap_reducer.py          # Paso 7.3: UMAP
 │   │
 │   ├── regularization/
 │   │   ├── __init__.py
-│   │   └── lasso_ridge.py          # Paso 8: Lasso y Ridge
+│   │   └── lasso_ridge.py           # Paso 8: Lasso y Ridge
 │   │
 │   ├── utils/
 │   │   ├── __init__.py
-│   │   └── config.py               # Parámetros globales y rutas
+│   │   ├── config.py                # Rutas y carga del config.yaml
+│   │   ├── apply_mappings.py        # Mapeo de códigos a etiquetas legibles
+│   │   └── json_saver.py            # Serialización de resultados a JSON
 │   │
 │   └── reporting/
 │       ├── __init__.py
-│       └── html_exporter.py        # Paso 9: genera report.html
-││
+│       └── html_exporter.py         # Generación del reporte HTML desde JSONs
+│
+├── outputs/                         # Reporte HTML final (generado, no subir a git)
+│
 ├── tests/
 │   └── test_pipeline.py
 │
+├── config.yaml                      # Parámetros configurables del pipeline
+├── environment.yml                  # Entorno conda reproducible
 ├── README.md
 └── requirements.txt
 ```
 
 ---
 
-## Requisitos
+## Configuración del entorno
+
+### Clonar el repositorio
 
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/Fabarcavalverde/insightengine.git
+cd insightengine
 ```
 
-Dependencias principales:
+### Crear el entorno conda
 
+```bash
+conda env create -f environment.yml
+conda activate InsightEngine
 ```
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-mlxtend
-umap-learn
-jinja2
+
+
+---
+
+## Uso con cualquier dataset
+
+InsightEngine puede usarse con cualquier dataset tabular. Solo hay que colocar el archivo en `data/raw/` y configurar `config.yaml`. No se modifica ningún archivo de código.
+
+### Requisitos del dataset
+
+| Requisito | Descripción |
+|-----------|-------------|
+| Formato | CSV, TSV o cualquier archivo de texto delimitado |
+| Columnas | Al menos una columna categórica para las reglas de asociación |
+| Target | Una columna que actúe como variable objetivo (puede ser categórica o numérica) |
+| Tamaño recomendado | Entre 500 y 100,000 filas. Datasets muy grandes pueden hacer ECLAT lento |
+
+### Configuración en config.yaml
+
+```yaml
+# ── OBLIGATORIO ─────────────────────────────────────────────────────
+
+data:
+  filename: "mi_dataset.csv"   # nombre del archivo en data/raw/
+  delimiter: ","               # separador: "," para CSV, ";" para punto y coma, " " para espacio
+  decimal: "."                 # separador decimal: "." o ","
+  header: infer                # "infer" si el archivo tiene encabezado, null si no tiene
+  target: "mi_columna"         # columna a predecir (clasificación) o excluir (asociación)
+  drop_na: true                # eliminar filas con valores nulos
+
+  # solo si header: null — lista de nombres para las columnas en orden
+  columnas: []
+
+  # columnas categóricas a usar en asociación
+  # vacío [] = usa automáticamente todas las categóricas excepto el target
+  columnas_asociacion: []
+
+
+# ── OPCIONAL — solo si los valores tienen códigos crípticos ─────────
+
+column_mappings:
+  nombre_columna:
+    "codigo_original": "etiqueta_legible"
+    "A11": "saldo_negativo"
+  otra_columna:
+    "1": "riesgo_bueno"
+    "2": "riesgo_malo"
+
+
+# ── PARÁMETROS DE MODELOS ────────────────────────────────────────────
+
+association:
+  apriori:
+    min_support: 0.3        # proporción mínima (0.0 - 1.0). Bajar si hay pocos patrones
+  eclat:
+    min_support: 300        # valor absoluto (número de transacciones)
+  rules:
+    min_confidence: 0.6     # confianza mínima para filtrar reglas (0.0 - 1.0)
+    min_threshold: 1.0      # lift mínimo
+
+classification:
+  train_size: 0.7           # proporción de entrenamiento
+  random_state: 42
+
+dimensionality:
+  n_components: 2           # dimensiones de salida (2 para visualización)
+  n_clusters: 3             # clusters para K-Medias
+  tsne:
+    perplexity: 30          # entre 5 y 50. Aumentar para datasets grandes
+    learning_rate: "auto"
+  umap:
+    n_neighbors: 15         # entre 5 y 50. Valores bajos = estructura local
+  kmeans:
+    max_iter: 2000
+    n_init: 150
+    random_state: 42
+
+regularization:
+  target_numerico: "columna_numerica"  # columna numérica continua a predecir
+  alpha: 1.0                           # penalización (mayor = más regularización)
+  test_size: 0.2
+
+eda:
+  output_dir: "data/processed/eda"
+  cardinality_threshold: 50
+  output_plots: true
 ```
+
+### Guía rápida para cambiar de dataset
+
+1. Colocar el archivo en `data/raw/`
+2. Actualizar `data.filename` y `data.target` en `config.yaml`
+3. Si el archivo no tiene encabezado, cambiar `header: null` y definir `columnas`
+4. Si los valores son códigos crípticos, definir `column_mappings`
+5. Ajustar `min_support` según el tamaño del dataset (datasets grandes → valor mayor)
+6. Correr `python src/main.py` y seleccionar `T`
 
 ---
 
 ## Ejecución
 
 ```bash
+conda activate InsightEngine
 python src/main.py
 ```
 
-El pipeline ejecuta todos los pasos en orden y genera `outputs/report.html` con los resultados completos.
+El pipeline se controla desde un menú interactivo:
+
+```
+=============================================
+  InsightEngine — Pipeline de Minería
+=============================================
+  1. Carga + mapeo de columnas
+  2. EDA
+  3. Limpieza
+  4. Asociación (Apriori + ECLAT)
+  5. Clasificación
+  6. Reducción de dimensiones
+  7. Lasso y Ridge
+  T. Ejecutar todo el pipeline
+  H. Generar reporte HTML
+  Q. Salir
+=============================================
+```
+
+Cada paso guarda sus resultados en `data/processed/` como JSON. La opción `H` genera el reporte HTML desde esos JSONs sin necesidad de correr el pipeline de nuevo.
 
 ---
 
 ## Pasos del pipeline
 
-| Paso | Módulo | Responsable | Descripción |
-|------|--------|-------------|-------------|
-| 1    | `ingestion/data_loader.py` | Fernando    | Carga del dataset desde `data/raw/` |
-| 2    | `eda/exploratory_analysis.py` | Fernando    | Estadísticas descriptivas |
-| 3    | `preprocessing/data_cleaner.py` | Fernando    | Limpieza, imputación y transformación |
-| 4    | `eda/exploratory_analysis.py` | Fernando    | Estadísticas descriptivas |
-| 5.1  | `association/apriori.py` | Fiorella    | Itemsets frecuentes con Apriori |
-| 5.2  | `association/eclat.py` | Fernando    | Itemsets frecuentes con ECLAT |
-| 6    | `association/association_rules.py` | Fiorella    | Generación y filtrado de reglas |
-| 7.1  | `dimensionality/pca_reducer.py` | Fiorella    | Reducción con ACP |
-| 7.2  | `dimensionality/tsne_reducer.py` | Fiorella    | Reducción con t-SNE |
-| 7.3  | `dimensionality/umap_reducer.py` | Fiorella    | Reducción con UMAP |
-| 8    | `regularization/lasso_ridge.py` | ---         | Regresión Lasso y Ridge |
-| 9    | `reporting/html_exporter.py` | ---         | Exportación del reporte HTML |
+| Paso    | Módulo                             | Descripción                                              |
+| ------- | ---------------------------------- | -------------------------------------------------------- |
+| 1       | `ingestion/data_loader.py`         | Carga del dataset + mapeo de columnas                    |
+| 2       | `eda/exploratory_analysis.py`      | Estadísticas descriptivas y visualizaciones interactivas |
+| 3       | `preprocessing/data_cleaner.py`    | Limpieza, corrección de typos, imputación                |
+| 4       | `preprocessing/data_preparator.py` | Transformación a formato transaccional y features        |
+| 5.1     | `association/apriori.py`           | Itemsets frecuentes con Apriori + reglas                 |
+| 5.2     | `association/eclat.py`             | Itemsets frecuentes con ECLAT                            |
+| 6       | `classification/classification.py` | KNN, SVM, árboles, ensembles, NaiveBayes, LDA, QDA       |
+| 7.1-7.3 | `dimensionality/`                  | ACP, t-SNE, UMAP con clustering K-Medias                 |
+| 8       | `regularization/lasso_ridge.py`    | Regresión Lasso y Ridge                                  |
+| H       | `reporting/html_exporter.py`       | Reporte HTML desde JSONs                                 |
+
+---
+
+## Archivos ignorados por git
+
+Los siguientes directorios se generan al correr el pipeline y **no deben subirse al repositorio**:
+
+```
+data/processed/
+outputs/
+**/__pycache__/
+**/*.pyc
+```
 
 ---
 
 ## Estándares de código
 
-### Nomenclatura
-
-- Archivos `.py` en minúsculas con guion bajo. El nombre del archivo coincide con la función principal que contiene.
-- Funciones nombradas en inglés con convención descriptiva.
-
-### Documentación de funciones
-
-Cada función debe documentar:
-
-```python
-def run_apriori(transactions: list[list[str]], min_support: float = 0.05) -> pd.DataFrame:
-    """
-    Objective:
-        Apply the Apriori algorithm to find frequent itemsets.
-
-    Parameters:
-        transactions (list[list[str]]): List of transactions.
-        min_support (float): Minimum support threshold (0.0 - 1.0).
-
-    Returns:
-        pd.DataFrame: Frequent itemsets with columns ['support', 'itemsets'].
-
-    Input format:
-        [['item_a', 'item_b'], ['item_b', 'item_c'], ...]
-
-    Output format:
-        | support | itemsets         |
-        |---------|------------------|
-        | 0.12    | frozenset({'a'}) |
-    """
-```
-
----
-
-## Estándares de commits
-
-### Ramas
-
-Cada miembro trabaja en su rama personal. La rama `main` se actualiza solo con versiones estables.
-
-```
-main
-├── fiorella
-├── fernando
-└── johel
-```
+- Archivos `.py` en minúsculas con guion bajo
+- Funciones nombradas en inglés
+- Docstrings y comentarios en español
+- Una clase por archivo, nombre del archivo = nombre de la clase principal
 
 ### Formato de commits
 
@@ -174,29 +264,17 @@ main
 feat:     Nueva funcionalidad
 fix:      Corrección de bug
 docs:     Solo documentación
-style:    Formato, sin cambio de lógica
+style:    Formato sin cambio de lógica
 refactor: Refactorización sin nueva funcionalidad
-perf:     Mejora de rendimiento
-test:     Pruebas
 chore:    Mantenimiento y dependencias
-build:    Herramientas de compilación
-ci:       Configuración de integración continua
 revert:   Reversión de commit anterior
 ```
 
-**Ejemplos:**
+### Ramas
 
-```bash
-feat: add apriori frequent itemset mining with min_support param
-feat: add association_rules generation with lift filtering
-feat: add pca_reducer with explained variance plot
-fix: handle empty transactions in eclat preprocessing
-docs: update README with pipeline execution steps
-refactor: extract transaction encoder to data_cleaner
 ```
-
----
-
-## Datasets
-
-Los datasets deben colocarse en `data/raw/` antes de ejecutar el pipeline. El archivo `src/utils/config.py` centraliza las rutas y parámetros configurables.
+main        ← solo versiones estables
+├── fiorella
+├── fernando
+└── johel
+```
