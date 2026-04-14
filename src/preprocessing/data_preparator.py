@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 
-
 class data_preparator:
     """
     Objetivo:
@@ -114,3 +113,37 @@ class data_preparator:
             df = df.drop(columns=[self.target])
 
         return df.select_dtypes(include=[np.number])
+
+    def for_regularization(self) -> tuple:
+        """
+        Objetivo:
+            Preparar (X, y) para LassoRidge.
+            Codifica categóricas, estandariza features y separa el target numérico.
+
+        Parámetros:
+            None
+
+        Retorna:
+            tuple: (X escalado pd.DataFrame, y pd.Series)
+
+        Raises:
+            ValueError: Si no se definió target.
+            TypeError: Si el target no es numérico.
+        """
+        if self.target is None:
+            raise ValueError("Se requiere target para regularización.")
+
+        if not pd.api.types.is_numeric_dtype(self.datos[self.target]):
+            raise TypeError(f"El target '{self.target}' debe ser numérico para Lasso/Ridge.")
+
+        features = [c for c in self.datos.columns if c != self.target]
+        X = pd.get_dummies(self.datos[features])
+        y = self.datos[self.target]
+
+        X_scaled = pd.DataFrame(
+            StandardScaler().fit_transform(X),
+            columns=X.columns,
+            index=X.index
+        )
+
+        return X_scaled, y

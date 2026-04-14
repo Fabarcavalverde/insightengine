@@ -1,0 +1,1108 @@
+{
+  "itemsets": [
+    {
+      "support": 963,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero"
+      ]
+    },
+    {
+      "support": 907,
+      "itemsets": [
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 880,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 814,
+      "itemsets": [
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 782,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 742,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 718,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 713,
+      "itemsets": [
+        "housing_propietario"
+      ]
+    },
+    {
+      "support": 685,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ]
+    },
+    {
+      "support": 647,
+      "itemsets": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 630,
+      "itemsets": [
+        "job_empleado_calificado"
+      ]
+    },
+    {
+      "support": 625,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 611,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ]
+    },
+    {
+      "support": 603,
+      "itemsets": [
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 596,
+      "itemsets": [
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 581,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 576,
+      "itemsets": [
+        "housing_propietario",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 570,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 564,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 558,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 550,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 548,
+      "itemsets": [
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 532,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 531,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 530,
+      "itemsets": [
+        "credit_history_pagando_puntual"
+      ]
+    },
+    {
+      "support": 529,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 525,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 524,
+      "itemsets": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 515,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 513,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 510,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero"
+      ]
+    },
+    {
+      "support": 509,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 504,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 495,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 490,
+      "itemsets": [
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 490,
+      "itemsets": [
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 480,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 479,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 472,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 472,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 469,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 462,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 458,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 452,
+      "itemsets": [
+        "housing_propietario",
+        "job_empleado_calificado"
+      ]
+    },
+    {
+      "support": 452,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 438,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "job_empleado_calificado"
+      ]
+    },
+    {
+      "support": 436,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 436,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 433,
+      "itemsets": [
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 433,
+      "itemsets": [
+        "housing_propietario",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 432,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 430,
+      "itemsets": [
+        "housing_propietario",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 421,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 416,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 412,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 412,
+      "itemsets": [
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 412,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 410,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 408,
+      "itemsets": [
+        "housing_propietario",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 404,
+      "itemsets": [
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 403,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 401,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 399,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 394,
+      "itemsets": [
+        "checking_account_sin_cuenta"
+      ]
+    },
+    {
+      "support": 393,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 391,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 390,
+      "itemsets": [
+        "job_empleado_calificado",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 389,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 386,
+      "itemsets": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 381,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "foreign_worker_trabajador_extranjero"
+      ]
+    },
+    {
+      "support": 379,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 377,
+      "itemsets": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 376,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 375,
+      "itemsets": [
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 374,
+      "itemsets": [
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 374,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 373,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 371,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 369,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 368,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "housing_propietario"
+      ]
+    },
+    {
+      "support": 368,
+      "itemsets": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 366,
+      "itemsets": [
+        "job_empleado_calificado",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 362,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 362,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 361,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 357,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 356,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 356,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 352,
+      "itemsets": [
+        "housing_propietario",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 351,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ]
+    },
+    {
+      "support": 347,
+      "itemsets": [
+        "housing_propietario",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 347,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 342,
+      "itemsets": [
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 340,
+      "itemsets": [
+        "job_empleado_calificado",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 339,
+      "itemsets": [
+        "employment_entre_1_4_anios"
+      ]
+    },
+    {
+      "support": 338,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 338,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "job_empleado_calificado"
+      ]
+    },
+    {
+      "support": 335,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 332,
+      "itemsets": [
+        "property_auto_u_otro"
+      ]
+    },
+    {
+      "support": 331,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 331,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 331,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 330,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 330,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 330,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 329,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "property_auto_u_otro"
+      ]
+    },
+    {
+      "support": 328,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ]
+    },
+    {
+      "support": 324,
+      "itemsets": [
+        "other_installments_ninguno",
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 323,
+      "itemsets": [
+        "housing_propietario",
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 323,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 323,
+      "itemsets": [
+        "employment_entre_1_4_anios",
+        "foreign_worker_trabajador_extranjero"
+      ]
+    },
+    {
+      "support": 322,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 322,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 322,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 321,
+      "itemsets": [
+        "personal_status_hombre_soltero",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 320,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 318,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 318,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 318,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "property_auto_u_otro"
+      ]
+    },
+    {
+      "support": 316,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 316,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "property_auto_u_otro"
+      ]
+    },
+    {
+      "support": 314,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 314,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "housing_propietario",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 313,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 313,
+      "itemsets": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 310,
+      "itemsets": [
+        "personal_status_mujer_divorciada"
+      ]
+    },
+    {
+      "support": 310,
+      "itemsets": [
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 310,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 310,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 308,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "personal_status_hombre_soltero",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 308,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 307,
+      "itemsets": [
+        "personal_status_hombre_soltero",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 307,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 306,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 305,
+      "itemsets": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 305,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 304,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "housing_propietario"
+      ]
+    },
+    {
+      "support": 303,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 303,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 303,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "personal_status_mujer_divorciada"
+      ]
+    },
+    {
+      "support": 302,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 302,
+      "itemsets": [
+        "employment_entre_1_4_anios",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 302,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 300,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    }
+  ]
+}

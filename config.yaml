@@ -1,0 +1,142 @@
+# config.yaml
+# Configuración central del pipeline InsightEngine
+
+data:
+  filename: "german.data"
+  delimiter: " "
+  decimal: "."
+  header: null
+  target: "risk"
+  drop_na: true
+  columnas:
+    - checking_account
+    - duration
+    - credit_history
+    - purpose
+    - credit_amount
+    - savings_account
+    - employment
+    - installment_rate
+    - personal_status
+    - other_debtors
+    - residence_since
+    - property
+    - age
+    - other_installments
+    - housing
+    - existing_credits
+    - job
+    - liable_people
+    - telephone
+    - foreign_worker
+    - risk
+  columnas_asociacion: []   # vacío = todas las categóricas excepto target
+
+association:
+  apriori:
+    min_support: 0.3
+  eclat:
+    min_support: 300
+  rules:
+    min_confidence: 0.6
+    min_threshold: 1.0
+
+classification:
+  train_size: 0.7
+  random_state: 42
+
+dimensionality:
+  n_components: 2
+  n_clusters: 3
+  tsne:
+    perplexity: 30
+    learning_rate: "auto"
+  umap:
+    n_neighbors: 15
+  kmeans:
+    max_iter: 2000
+    n_init: 150
+    random_state: 42
+
+regularization:
+  alpha: 1.0
+  test_size: 0.2
+  target_numerico: "credit_amount"   # columna numérica del german.data para Lasso/Ridge
+
+eda:
+  output_dir: "data/processed/eda"
+  cardinality_threshold: 50
+  output_plots: true
+
+column_mappings:
+  checking_account:
+    A11: "saldo_negativo"
+    A12: "saldo_bajo"
+    A13: "saldo_alto"
+    A14: "sin_cuenta"
+  credit_history:
+    A30: "sin_creditos_previos"
+    A31: "pagado_puntual_banco"
+    A32: "pagando_puntual"
+    A33: "pagos_atrasados"
+    A34: "cuenta_critica"
+  purpose:
+    A40: "auto_nuevo"
+    A41: "auto_usado"
+    A42: "mobiliario"
+    A43: "radio_tv"
+    A44: "electrodomesticos"
+    A45: "reparaciones"
+    A46: "educacion"
+    A48: "recapacitacion"
+    A49: "negocio"
+    A410: "otros"
+  savings_account:
+    A61: "ahorros_bajos"
+    A62: "ahorros_medios"
+    A63: "ahorros_altos"
+    A64: "ahorros_muy_altos"
+    A65: "sin_ahorros"
+  employment:
+    A71: "desempleado"
+    A72: "menos_1_anio"
+    A73: "entre_1_4_anios"
+    A74: "entre_4_7_anios"
+    A75: "mas_7_anios"
+  personal_status:
+    A91: "hombre_divorciado"
+    A92: "mujer_divorciada"
+    A93: "hombre_soltero"
+    A94: "hombre_casado"
+    A95: "mujer_soltera"
+  other_debtors:
+    A101: "ninguno"
+    A102: "coacreditado"
+    A103: "garante"
+  property:
+    A121: "bien_raiz"
+    A122: "seguro_vida"
+    A123: "auto_u_otro"
+    A124: "sin_propiedad"
+  other_installments:
+    A141: "banco"
+    A142: "tiendas"
+    A143: "ninguno"
+  housing:
+    A151: "alquiler"
+    A152: "propietario"
+    A153: "gratuita"
+  job:
+    A171: "no_residente_no_calificado"
+    A172: "residente_no_calificado"
+    A173: "empleado_calificado"
+    A174: "alta_gerencia"
+  telephone:
+    A191: "sin_telefono"
+    A192: "con_telefono"
+  foreign_worker:
+    A201: "trabajador_extranjero"
+    A202: "trabajador_local"
+  risk:
+    1: "riesgo_bueno"
+    2: "riesgo_malo"

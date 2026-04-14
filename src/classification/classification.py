@@ -154,7 +154,7 @@ class classification:
 
     def run_qda(self) -> dict:
         """Objetivo: Ejecutar Análisis Discriminante Cuadrático. Retorna: dict con métricas."""
-        return self._evaluar(QuadraticDiscriminantAnalysis(), "QDA")
+        return self._evaluar(QuadraticDiscriminantAnalysis(reg_param=0.1), "QDA")
 
     def run_all(self) -> pd.DataFrame:
         """

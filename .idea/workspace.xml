@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42334c8e-66ac-4f9b-bf4e-d66aa202d835" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/apply_mappings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/json_saver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classification/classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/classification/classification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/raw/german.data" beforeDir="false" afterPath="$PROJECT_DIR$/data/raw/german.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/raw/playtennis.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ingestion/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ingestion/data_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/preprocessing/cleaner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/preprocessing/data_preparator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocessing/data_preparator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/regularization/lasso_ridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/regularization/lasso_ridge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +37,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="3A68mkTlkmQZRGkljKFqsgFvNSg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,7 +58,8 @@
     &quot;Python.setup_project.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Fiorella&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;fiorella&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/InsightEngine&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -48,10 +69,15 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\InsightEngine" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\InsightEngine" />
+      <recent name="C:\InsightEngine\src\utils" />
+      <recent name="C:\InsightEngine\src" />
       <recent name="C:\InsightEngine\data\raw" />
       <recent name="C:\InsightEngine\src\association" />
-      <recent name="C:\InsightEngine\src" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -75,6 +101,7 @@
       <workItem from="1774229245710" duration="4992000" />
       <workItem from="1774408603618" duration="104000" />
       <workItem from="1775439774200" duration="5785000" />
+      <workItem from="1776121029406" duration="4941000" />
     </task>
     <servers />
   </component>
@@ -84,6 +111,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/InsightEngine$setup_project.coverage" NAME="setup_project Coverage Results" MODIFIED="1771902151988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/InsightEngine$script.coverage" NAME="script Coverage Results" MODIFIED="1771901975511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/InsightEngine$main.coverage" NAME="main Coverage Results" MODIFIED="1774234651487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/InsightEngine$main.coverage" NAME="main Coverage Results" MODIFIED="1776125898000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>

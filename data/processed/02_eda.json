@@ -1,0 +1,338 @@
+{
+  "missing": {
+    "Columna": {},
+    "Cantidad": {},
+    "Porcentaje (%)": {}
+  },
+  "duplicates": 0,
+  "descriptive_stats": {
+    "numeric_cols": [
+      "duration",
+      "credit_amount",
+      "installment_rate",
+      "age",
+      "existing_credits",
+      "liable_people"
+    ],
+    "categorical_cols": [
+      "checking_account",
+      "credit_history",
+      "purpose",
+      "savings_account",
+      "employment",
+      "personal_status",
+      "other_debtors",
+      "property",
+      "other_installments",
+      "housing",
+      "job",
+      "telephone",
+      "foreign_worker",
+      "risk"
+    ],
+    "boolean_cols": [],
+    "date_cols": [],
+    "numeric_stats": {
+      "duration": {
+        "count": 1000.0,
+        "mean": 20.903,
+        "std": 12.058814452756375,
+        "min": 4.0,
+        "25%": 12.0,
+        "50%": 18.0,
+        "75%": 24.0,
+        "max": 72.0
+      },
+      "credit_amount": {
+        "count": 1000.0,
+        "mean": 3271.258,
+        "std": 2822.7368759604406,
+        "min": 250.0,
+        "25%": 1365.5,
+        "50%": 2319.5,
+        "75%": 3972.25,
+        "max": 18424.0
+      },
+      "installment_rate": {
+        "count": 1000.0,
+        "mean": 2.973,
+        "std": 1.1187146743126786,
+        "min": 1.0,
+        "25%": 2.0,
+        "50%": 3.0,
+        "75%": 4.0,
+        "max": 4.0
+      },
+      "age": {
+        "count": 1000.0,
+        "mean": 35.546,
+        "std": 11.375468574317512,
+        "min": 19.0,
+        "25%": 27.0,
+        "50%": 33.0,
+        "75%": 42.0,
+        "max": 75.0
+      },
+      "existing_credits": {
+        "count": 1000.0,
+        "mean": 1.407,
+        "std": 0.5776544682461002,
+        "min": 1.0,
+        "25%": 1.0,
+        "50%": 1.0,
+        "75%": 2.0,
+        "max": 4.0
+      },
+      "liable_people": {
+        "count": 1000.0,
+        "mean": 1.155,
+        "std": 0.36208577175319395,
+        "min": 1.0,
+        "25%": 1.0,
+        "50%": 1.0,
+        "75%": 1.0,
+        "max": 2.0
+      }
+    },
+    "categorical_info": {
+      "Columna": {
+        "0": "checking_account",
+        "1": "credit_history",
+        "2": "purpose",
+        "3": "savings_account",
+        "4": "employment",
+        "5": "personal_status",
+        "6": "other_debtors",
+        "7": "property",
+        "8": "other_installments",
+        "9": "housing",
+        "10": "job",
+        "11": "telephone",
+        "12": "foreign_worker",
+        "13": "risk"
+      },
+      "Valores únicos": {
+        "0": 4,
+        "1": 5,
+        "2": 10,
+        "3": 5,
+        "4": 5,
+        "5": 4,
+        "6": 3,
+        "7": 4,
+        "8": 3,
+        "9": 3,
+        "10": 4,
+        "11": 2,
+        "12": 2,
+        "13": 2
+      },
+      "Valor más frecuente": {
+        "0": "sin_cuenta",
+        "1": "pagando_puntual",
+        "2": "radio_tv",
+        "3": "ahorros_bajos",
+        "4": "entre_1_4_anios",
+        "5": "hombre_soltero",
+        "6": "ninguno",
+        "7": "auto_u_otro",
+        "8": "ninguno",
+        "9": "propietario",
+        "10": "empleado_calificado",
+        "11": "sin_telefono",
+        "12": "trabajador_extranjero",
+        "13": "riesgo_bueno"
+      },
+      "Frecuencia": {
+        "0": 394,
+        "1": 530,
+        "2": 280,
+        "3": 603,
+        "4": 339,
+        "5": 548,
+        "6": 907,
+        "7": 332,
+        "8": 814,
+        "9": 713,
+        "10": 630,
+        "11": 596,
+        "12": 963,
+        "13": 700
+      },
+      "% Frecuencia": {
+        "0": 39.4,
+        "1": 53.0,
+        "2": 28.0,
+        "3": 60.3,
+        "4": 33.9,
+        "5": 54.8,
+        "6": 90.7,
+        "7": 33.2,
+        "8": 81.4,
+        "9": 71.3,
+        "10": 63.0,
+        "11": 59.6,
+        "12": 96.3,
+        "13": 70.0
+      }
+    }
+  },
+  "outliers": {
+    "duration": {
+      "n_outliers": 70,
+      "pct": 7.0,
+      "lower_bound": -6.0,
+      "upper_bound": 42.0
+    },
+    "credit_amount": {
+      "n_outliers": 72,
+      "pct": 7.2,
+      "lower_bound": -2544.625,
+      "upper_bound": 7882.375
+    },
+    "installment_rate": {
+      "n_outliers": 0,
+      "pct": 0.0,
+      "lower_bound": -1.0,
+      "upper_bound": 7.0
+    },
+    "residence_since": {
+      "n_outliers": 0,
+      "pct": 0.0,
+      "lower_bound": -1.0,
+      "upper_bound": 7.0
+    },
+    "age": {
+      "n_outliers": 23,
+      "pct": 2.3,
+      "lower_bound": 4.5,
+      "upper_bound": 64.5
+    },
+    "existing_credits": {
+      "n_outliers": 6,
+      "pct": 0.6,
+      "lower_bound": -0.5,
+      "upper_bound": 3.5
+    },
+    "liable_people": {
+      "n_outliers": 155,
+      "pct": 15.5,
+      "lower_bound": 1.0,
+      "upper_bound": 1.0
+    }
+  },
+  "correlation": {
+    "duration": {
+      "duration": 1.0,
+      "credit_amount": 0.6247090778062971,
+      "installment_rate": 0.1180461236317792,
+      "residence_since": 0.04367050210126079,
+      "age": -0.03631637736138955,
+      "existing_credits": 0.028429560187982636,
+      "liable_people": -0.04326536842759453
+    },
+    "credit_amount": {
+      "duration": 0.6247090778062971,
+      "credit_amount": 1.0,
+      "installment_rate": -0.31309991325335235,
+      "residence_since": 0.023645876028195123,
+      "age": 0.026298440516129847,
+      "existing_credits": 0.023778290865950655,
+      "liable_people": 0.04181471033432463
+    },
+    "installment_rate": {
+      "duration": 0.1180461236317792,
+      "credit_amount": -0.31309991325335235,
+      "installment_rate": 1.0,
+      "residence_since": 0.04750716765118953,
+      "age": 0.07215680177635604,
+      "existing_credits": 0.02099737214887789,
+      "liable_people": -0.07254334866462106
+    },
+    "residence_since": {
+      "duration": 0.04367050210126079,
+      "credit_amount": 0.023645876028195123,
+      "installment_rate": 0.04750716765118953,
+      "residence_since": 1.0,
+      "age": 0.2347086370754893,
+      "existing_credits": 0.0671928834243824,
+      "liable_people": 0.04045465204305379
+    },
+    "age": {
+      "duration": -0.03631637736138955,
+      "credit_amount": 0.026298440516129847,
+      "installment_rate": 0.07215680177635604,
+      "residence_since": 0.2347086370754893,
+      "age": 1.0,
+      "existing_credits": 0.14128661264538275,
+      "liable_people": 0.19065118631302239
+    },
+    "existing_credits": {
+      "duration": 0.028429560187982636,
+      "credit_amount": 0.023778290865950655,
+      "installment_rate": 0.02099737214887789,
+      "residence_since": 0.0671928834243824,
+      "age": 0.14128661264538275,
+      "existing_credits": 1.0,
+      "liable_people": 0.09697800090336388
+    },
+    "liable_people": {
+      "duration": -0.04326536842759453,
+      "credit_amount": 0.04181471033432463,
+      "installment_rate": -0.07254334866462106,
+      "residence_since": 0.04045465204305379,
+      "age": 0.19065118631302239,
+      "existing_credits": 0.09697800090336388,
+      "liable_people": 1.0
+    }
+  },
+  "variable_types": {
+    "numeric": [
+      "duration",
+      "credit_amount",
+      "installment_rate",
+      "residence_since",
+      "age",
+      "existing_credits",
+      "liable_people"
+    ],
+    "categorical": [
+      "checking_account",
+      "credit_history",
+      "purpose",
+      "savings_account",
+      "employment",
+      "personal_status",
+      "other_debtors",
+      "property",
+      "other_installments",
+      "housing",
+      "job",
+      "telephone",
+      "foreign_worker",
+      "risk"
+    ],
+    "boolean": [],
+    "datetime": []
+  },
+  "cardinality": {
+    "checking_account": 4,
+    "credit_history": 5,
+    "purpose": 10,
+    "savings_account": 5,
+    "employment": 5,
+    "personal_status": 4,
+    "other_debtors": 3,
+    "property": 4,
+    "other_installments": 3,
+    "housing": 3,
+    "job": 4,
+    "telephone": 2,
+    "foreign_worker": 2,
+    "risk": 2
+  },
+  "validation": {
+    "constant_columns": [],
+    "negative_columns": []
+  }
+}

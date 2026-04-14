@@ -4,7 +4,7 @@ import os
 import pandas as pd
 
 
-class DataLoader:
+class data_loader:
     """
     Objetivo:
         Cargar cualquier dataset CSV/data desde data/raw/.

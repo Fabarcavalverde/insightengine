@@ -1,0 +1,6318 @@
+{
+  "itemsets": [
+    {
+      "support": 0.394,
+      "itemsets": [
+        "checking_account_sin_cuenta"
+      ]
+    },
+    {
+      "support": 0.53,
+      "itemsets": [
+        "credit_history_pagando_puntual"
+      ]
+    },
+    {
+      "support": 0.339,
+      "itemsets": [
+        "employment_entre_1_4_anios"
+      ]
+    },
+    {
+      "support": 0.963,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero"
+      ]
+    },
+    {
+      "support": 0.713,
+      "itemsets": [
+        "housing_propietario"
+      ]
+    },
+    {
+      "support": 0.63,
+      "itemsets": [
+        "job_empleado_calificado"
+      ]
+    },
+    {
+      "support": 0.907,
+      "itemsets": [
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.814,
+      "itemsets": [
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.548,
+      "itemsets": [
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.31,
+      "itemsets": [
+        "personal_status_mujer_divorciada"
+      ]
+    },
+    {
+      "support": 0.332,
+      "itemsets": [
+        "property_auto_u_otro"
+      ]
+    },
+    {
+      "support": 0.603,
+      "itemsets": [
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.404,
+      "itemsets": [
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 0.596,
+      "itemsets": [
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.381,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "foreign_worker_trabajador_extranjero"
+      ]
+    },
+    {
+      "support": 0.304,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "housing_propietario"
+      ]
+    },
+    {
+      "support": 0.373,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.33,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.51,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero"
+      ]
+    },
+    {
+      "support": 0.368,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "housing_propietario"
+      ]
+    },
+    {
+      "support": 0.338,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "job_empleado_calificado"
+      ]
+    },
+    {
+      "support": 0.472,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.452,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.318,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.33,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.323,
+      "itemsets": [
+        "employment_entre_1_4_anios",
+        "foreign_worker_trabajador_extranjero"
+      ]
+    },
+    {
+      "support": 0.302,
+      "itemsets": [
+        "employment_entre_1_4_anios",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.685,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ]
+    },
+    {
+      "support": 0.611,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ]
+    },
+    {
+      "support": 0.88,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.782,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.525,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.303,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "personal_status_mujer_divorciada"
+      ]
+    },
+    {
+      "support": 0.329,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "property_auto_u_otro"
+      ]
+    },
+    {
+      "support": 0.581,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.399,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 0.564,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.452,
+      "itemsets": [
+        "housing_propietario",
+        "job_empleado_calificado"
+      ]
+    },
+    {
+      "support": 0.647,
+      "itemsets": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.576,
+      "itemsets": [
+        "housing_propietario",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.408,
+      "itemsets": [
+        "housing_propietario",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.43,
+      "itemsets": [
+        "housing_propietario",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.433,
+      "itemsets": [
+        "housing_propietario",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.57,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.529,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.34,
+      "itemsets": [
+        "job_empleado_calificado",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.366,
+      "itemsets": [
+        "job_empleado_calificado",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.39,
+      "itemsets": [
+        "job_empleado_calificado",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.742,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.495,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.318,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "property_auto_u_otro"
+      ]
+    },
+    {
+      "support": 0.532,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.376,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 0.531,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.433,
+      "itemsets": [
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.49,
+      "itemsets": [
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.324,
+      "itemsets": [
+        "other_installments_ninguno",
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 0.49,
+      "itemsets": [
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.321,
+      "itemsets": [
+        "personal_status_hombre_soltero",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.307,
+      "itemsets": [
+        "personal_status_hombre_soltero",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.374,
+      "itemsets": [
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.362,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.318,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.313,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.351,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ]
+    },
+    {
+      "support": 0.328,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ]
+    },
+    {
+      "support": 0.458,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.432,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.308,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.314,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.322,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.314,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "housing_propietario",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.302,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.403,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.438,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "job_empleado_calificado"
+      ]
+    },
+    {
+      "support": 0.625,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.55,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.391,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.412,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.41,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.558,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.513,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.331,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.356,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.374,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.718,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.479,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.316,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "property_auto_u_otro"
+      ]
+    },
+    {
+      "support": 0.515,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.371,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 0.509,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.412,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.472,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.32,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 0.462,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.308,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "personal_status_hombre_soltero",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.356,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.412,
+      "itemsets": [
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.375,
+      "itemsets": [
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.524,
+      "itemsets": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.368,
+      "itemsets": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.377,
+      "itemsets": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.386,
+      "itemsets": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.323,
+      "itemsets": [
+        "housing_propietario",
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.347,
+      "itemsets": [
+        "housing_propietario",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.352,
+      "itemsets": [
+        "housing_propietario",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.48,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.305,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.322,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.347,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.303,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.335,
+      "itemsets": [
+        "job_empleado_calificado",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.393,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.436,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.306,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 0.436,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.323,
+      "itemsets": [
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.31,
+      "itemsets": [
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.303,
+      "itemsets": [
+        "checking_account_sin_cuenta",
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.31,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.389,
+      "itemsets": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.401,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ]
+    },
+    {
+      "support": 0.361,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.504,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.357,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.362,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.369,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.307,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.331,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.33,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.469,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.3,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.316,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.338,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.322,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.379,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ]
+    },
+    {
+      "support": 0.421,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.302,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "telephone_con_telefono"
+      ]
+    },
+    {
+      "support": 0.416,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.31,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.342,
+      "itemsets": [
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    },
+    {
+      "support": 0.305,
+      "itemsets": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ]
+    },
+    {
+      "support": 0.313,
+      "itemsets": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ]
+    },
+    {
+      "support": 0.331,
+      "itemsets": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ]
+    }
+  ],
+  "reglas": [
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.381,
+      "confidence": 0.9670050761421319,
+      "lift": 1.0041589575723073
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.304,
+      "confidence": 0.7715736040609137,
+      "lift": 1.082150917336485
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.373,
+      "confidence": 0.9467005076142132,
+      "lift": 1.0437712322097168
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.33,
+      "confidence": 0.8375634517766497,
+      "lift": 1.0289477294553437
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.51,
+      "confidence": 0.9622641509433962,
+      "lift": 0.9992358784458943
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.368,
+      "confidence": 0.6943396226415094,
+      "lift": 0.9738283627510651
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.338,
+      "confidence": 0.6377358490566037,
+      "lift": 1.0122791254866725
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.472,
+      "confidence": 0.890566037735849,
+      "lift": 0.9818809677352248
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.452,
+      "confidence": 0.8528301886792453,
+      "lift": 1.0477029344953874
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual"
+      ],
+      "consequents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "support": 0.318,
+      "confidence": 0.6,
+      "lift": 0.9950248756218906
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.33,
+      "confidence": 0.6226415094339622,
+      "lift": 1.0447005191845005
+    },
+    {
+      "antecedents": [
+        "employment_entre_1_4_anios"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.323,
+      "confidence": 0.9528023598820059,
+      "lift": 0.98941055024092
+    },
+    {
+      "antecedents": [
+        "employment_entre_1_4_anios"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.302,
+      "confidence": 0.8908554572271385,
+      "lift": 0.9822000630949708
+    },
+    {
+      "antecedents": [
+        "housing_propietario"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.685,
+      "confidence": 0.9607293127629735,
+      "lift": 0.9976420693281137
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.685,
+      "confidence": 0.711318795430945,
+      "lift": 0.9976420693281136
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.611,
+      "confidence": 0.6344755970924195,
+      "lift": 1.0071041223689199
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.611,
+      "confidence": 0.9698412698412698,
+      "lift": 1.0071041223689199
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.88,
+      "confidence": 0.9138110072689513,
+      "lift": 1.0075093795688548
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.88,
+      "confidence": 0.970231532524807,
+      "lift": 1.0075093795688546
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.782,
+      "confidence": 0.9606879606879608,
+      "lift": 0.9975991284402501
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.782,
+      "confidence": 0.8120456905503635,
+      "lift": 0.99759912844025
+    },
+    {
+      "antecedents": [
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.525,
+      "confidence": 0.9580291970802919,
+      "lift": 0.9948382108829615
+    },
+    {
+      "antecedents": [
+        "personal_status_mujer_divorciada"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.303,
+      "confidence": 0.9774193548387097,
+      "lift": 1.014973369510602
+    },
+    {
+      "antecedents": [
+        "property_auto_u_otro"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.329,
+      "confidence": 0.9909638554216867,
+      "lift": 1.029038271465926
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.581,
+      "confidence": 0.9635157545605306,
+      "lift": 1.000535570675525
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "support": 0.581,
+      "confidence": 0.6033229491173416,
+      "lift": 1.0005355706755252
+    },
+    {
+      "antecedents": [
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.399,
+      "confidence": 0.9876237623762376,
+      "lift": 1.0255698467042966
+    },
+    {
+      "antecedents": [
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.564,
+      "confidence": 0.9463087248322147,
+      "lift": 0.9826674193480942
+    },
+    {
+      "antecedents": [
+        "housing_propietario"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.452,
+      "confidence": 0.6339410939691446,
+      "lift": 1.006255704712928
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.452,
+      "confidence": 0.7174603174603175,
+      "lift": 1.0062557047129277
+    },
+    {
+      "antecedents": [
+        "housing_propietario"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.647,
+      "confidence": 0.9074333800841515,
+      "lift": 1.0004778170718318
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.647,
+      "confidence": 0.7133406835722161,
+      "lift": 1.000477817071832
+    },
+    {
+      "antecedents": [
+        "housing_propietario"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.576,
+      "confidence": 0.8078541374474053,
+      "lift": 0.9924498003039378
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.576,
+      "confidence": 0.7076167076167076,
+      "lift": 0.9924498003039377
+    },
+    {
+      "antecedents": [
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.408,
+      "confidence": 0.7445255474452553,
+      "lift": 1.0442153540606667
+    },
+    {
+      "antecedents": [
+        "housing_propietario"
+      ],
+      "consequents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "support": 0.43,
+      "confidence": 0.603085553997195,
+      "lift": 1.0001418805923632
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.43,
+      "confidence": 0.7131011608623549,
+      "lift": 1.0001418805923632
+    },
+    {
+      "antecedents": [
+        "housing_propietario"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.433,
+      "confidence": 0.6072931276297335,
+      "lift": 1.0189482007210295
+    },
+    {
+      "antecedents": [
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.433,
+      "confidence": 0.7265100671140939,
+      "lift": 1.0189482007210293
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.57,
+      "confidence": 0.6284454244762954,
+      "lift": 0.9975324198036434
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.57,
+      "confidence": 0.9047619047619047,
+      "lift": 0.9975324198036435
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.529,
+      "confidence": 0.64987714987715,
+      "lift": 1.0315510315510317
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.529,
+      "confidence": 0.8396825396825397,
+      "lift": 1.0315510315510317
+    },
+    {
+      "antecedents": [
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.34,
+      "confidence": 0.6204379562043796,
+      "lift": 0.9848221527053644
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.366,
+      "confidence": 0.6069651741293532,
+      "lift": 0.9634367843323067
+    },
+    {
+      "antecedents": [
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.39,
+      "confidence": 0.6543624161073825,
+      "lift": 1.03867050175775
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.39,
+      "confidence": 0.6190476190476191,
+      "lift": 1.0386705017577502
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.742,
+      "confidence": 0.9115479115479116,
+      "lift": 1.0050142354442244
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.742,
+      "confidence": 0.8180815876515987,
+      "lift": 1.0050142354442244
+    },
+    {
+      "antecedents": [
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.495,
+      "confidence": 0.9032846715328466,
+      "lift": 0.9959037172357735
+    },
+    {
+      "antecedents": [
+        "property_auto_u_otro"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.318,
+      "confidence": 0.9578313253012047,
+      "lift": 1.0560433575536987
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.532,
+      "confidence": 0.8822553897180764,
+      "lift": 0.9727181805050455
+    },
+    {
+      "antecedents": [
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.376,
+      "confidence": 0.9306930693069306,
+      "lift": 1.0261224578907724
+    },
+    {
+      "antecedents": [
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.531,
+      "confidence": 0.8909395973154364,
+      "lift": 0.9822928305572617
+    },
+    {
+      "antecedents": [
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.433,
+      "confidence": 0.7901459854014597,
+      "lift": 0.9706953137610072
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "support": 0.49,
+      "confidence": 0.601965601965602,
+      "lift": 0.9982845803741327
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.49,
+      "confidence": 0.8126036484245439,
+      "lift": 0.9982845803741326
+    },
+    {
+      "antecedents": [
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.324,
+      "confidence": 0.8019801980198019,
+      "lift": 0.9852336585009852
+    },
+    {
+      "antecedents": [
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.49,
+      "confidence": 0.8221476510067114,
+      "lift": 1.0100093992711443
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.49,
+      "confidence": 0.601965601965602,
+      "lift": 1.0100093992711443
+    },
+    {
+      "antecedents": [
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "support": 0.374,
+      "confidence": 0.62751677852349,
+      "lift": 1.0406580075016418
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.374,
+      "confidence": 0.6202321724709785,
+      "lift": 1.0406580075016418
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta",
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.362,
+      "confidence": 0.9501312335958004,
+      "lift": 1.0475537305356124
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.362,
+      "confidence": 0.9705093833780161,
+      "lift": 1.0077979058961746
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.362,
+      "confidence": 0.9187817258883249,
+      "lift": 1.0440701430549146
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.318,
+      "confidence": 0.9636363636363636,
+      "lift": 1.000660813744926
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta",
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.318,
+      "confidence": 0.8346456692913385,
+      "lift": 1.0253632300876396
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.318,
+      "confidence": 0.8071065989847716,
+      "lift": 1.0321056253002194
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.313,
+      "confidence": 0.9484848484848485,
+      "lift": 1.045738531956834
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.313,
+      "confidence": 0.839142091152815,
+      "lift": 1.0308870898683231
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.313,
+      "confidence": 0.7944162436548223,
+      "lift": 1.0706418378097335
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "housing_propietario"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.351,
+      "confidence": 0.9538043478260869,
+      "lift": 0.9904510361641609
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.351,
+      "confidence": 0.6882352941176471,
+      "lift": 0.965266892170613
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.351,
+      "confidence": 0.6622641509433962,
+      "lift": 0.9668089794794105
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.328,
+      "confidence": 0.6431372549019608,
+      "lift": 1.020852785558668
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.328,
+      "confidence": 0.9704142011834319,
+      "lift": 1.007699066649462
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "support": 0.328,
+      "confidence": 0.6188679245283019,
+      "lift": 1.0128771268875645
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.458,
+      "confidence": 0.8980392156862745,
+      "lift": 0.9901204142075793
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.458,
+      "confidence": 0.9703389830508475,
+      "lift": 1.0076209585159372
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.458,
+      "confidence": 0.8641509433962264,
+      "lift": 0.9819897084048028
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.432,
+      "confidence": 0.9557522123893805,
+      "lift": 0.9924737407989414
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.432,
+      "confidence": 0.8470588235294118,
+      "lift": 1.0406128053186878
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.432,
+      "confidence": 0.8150943396226414,
+      "lift": 1.042320127394682
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "support": 0.308,
+      "confidence": 0.6039215686274509,
+      "lift": 1.0015283061815108
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.308,
+      "confidence": 0.9685534591194969,
+      "lift": 1.005766831899789
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.314,
+      "confidence": 0.9515151515151514,
+      "lift": 0.988073885270147
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.314,
+      "confidence": 0.615686274509804,
+      "lift": 1.0330306619292013
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "housing_propietario"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.322,
+      "confidence": 0.875,
+      "lift": 0.9647188533627342
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.322,
+      "confidence": 0.6822033898305085,
+      "lift": 0.9568069983597596
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.322,
+      "confidence": 0.6075471698113207,
+      "lift": 0.9390219007902948
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "housing_propietario"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.314,
+      "confidence": 0.8532608695652174,
+      "lift": 1.0482320264928962
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.314,
+      "confidence": 0.6946902654867256,
+      "lift": 0.9743201479477218
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.302,
+      "confidence": 0.6398305084745762,
+      "lift": 1.0156039817056766
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.302,
+      "confidence": 0.8934911242603549,
+      "lift": 0.9851059804414056
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.403,
+      "confidence": 0.8915929203539823,
+      "lift": 0.9830131426174005
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.403,
+      "confidence": 0.853813559322034,
+      "lift": 1.0489110065381253
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.403,
+      "confidence": 0.7603773584905661,
+      "lift": 1.0247673295021107
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.438,
+      "confidence": 0.6394160583941605,
+      "lift": 1.0149461244351754
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.438,
+      "confidence": 0.9690265486725663,
+      "lift": 1.0062580983100378
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.438,
+      "confidence": 0.7168576104746318,
+      "lift": 1.0054103933725551
+    },
+    {
+      "antecedents": [
+        "housing_propietario"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "support": 0.438,
+      "confidence": 0.6143057503506312,
+      "lift": 1.0054103933725551
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.438,
+      "confidence": 0.6952380952380952,
+      "lift": 1.0149461244351754
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.625,
+      "confidence": 0.9124087591240875,
+      "lift": 1.0059633507432055
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.625,
+      "confidence": 0.9659969088098918,
+      "lift": 1.0031120548389323
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.625,
+      "confidence": 0.7102272727272727,
+      "lift": 0.996111181945684
+    },
+    {
+      "antecedents": [
+        "housing_propietario"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.625,
+      "confidence": 0.876577840112202,
+      "lift": 0.996111181945684
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.625,
+      "confidence": 0.6490134994807892,
+      "lift": 1.0031120548389323
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.625,
+      "confidence": 0.6890848952590959,
+      "lift": 1.0059633507432055
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.55,
+      "confidence": 0.9548611111111113,
+      "lift": 0.9915484019845393
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.55,
+      "confidence": 0.8029197080291971,
+      "lift": 0.9863878477017164
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.55,
+      "confidence": 0.7033248081841432,
+      "lift": 0.986430306008616
+    },
+    {
+      "antecedents": [
+        "housing_propietario"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.55,
+      "confidence": 0.7713884992987379,
+      "lift": 0.9864303060086161
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.55,
+      "confidence": 0.6756756756756758,
+      "lift": 0.9863878477017164
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.391,
+      "confidence": 0.7447619047619047,
+      "lift": 1.044546850998464
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.391,
+      "confidence": 0.9583333333333335,
+      "lift": 0.9951540325372102
+    },
+    {
+      "antecedents": [
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.391,
+      "confidence": 0.7135036496350364,
+      "lift": 1.041611167350418
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.412,
+      "confidence": 0.958139534883721,
+      "lift": 0.9949527880412471
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.412,
+      "confidence": 0.7091222030981067,
+      "lift": 0.9945612946677513
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "consequents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "support": 0.412,
+      "confidence": 0.6014598540145984,
+      "lift": 0.9974458607207272
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.412,
+      "confidence": 0.6832504145936982,
+      "lift": 0.9974458607207272
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.41,
+      "confidence": 0.9468822170900693,
+      "lift": 0.9832629460956067
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.41,
+      "confidence": 0.7269503546099291,
+      "lift": 1.0195657147404336
+    },
+    {
+      "antecedents": [
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.41,
+      "confidence": 0.6879194630872483,
+      "lift": 1.0042619899083916
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.558,
+      "confidence": 0.6340909090909091,
+      "lift": 1.0064935064935066
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.558,
+      "confidence": 0.9789473684210528,
+      "lift": 1.016560091818331
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.558,
+      "confidence": 0.9132569558101474,
+      "lift": 1.0068985179825218
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "support": 0.558,
+      "confidence": 0.6152149944873209,
+      "lift": 1.0068985179825218
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.558,
+      "confidence": 0.8857142857142858,
+      "lift": 1.0064935064935066
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.513,
+      "confidence": 0.6560102301790282,
+      "lift": 1.0412860796492511
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.513,
+      "confidence": 0.9697542533081285,
+      "lift": 1.007013762521421
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.513,
+      "confidence": 0.839607201309329,
+      "lift": 1.0314584782669889
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "support": 0.513,
+      "confidence": 0.6302211302211302,
+      "lift": 1.0314584782669889
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.513,
+      "confidence": 0.8142857142857143,
+      "lift": 1.041286079649251
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.331,
+      "confidence": 0.6304761904761905,
+      "lift": 1.000755857898715
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.331,
+      "confidence": 0.9735294117647059,
+      "lift": 1.0109339686030177
+    },
+    {
+      "antecedents": [
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "support": 0.331,
+      "confidence": 0.6040145985401459,
+      "lift": 0.9885672643864909
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.356,
+      "confidence": 0.612736660929432,
+      "lift": 0.972597874491162
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.356,
+      "confidence": 0.9726775956284153,
+      "lift": 1.0100494243285725
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.374,
+      "confidence": 0.6631205673758865,
+      "lift": 1.052572329168074
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.374,
+      "confidence": 0.9589743589743589,
+      "lift": 0.9958196874084724
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.374,
+      "confidence": 0.6121112929623568,
+      "lift": 1.0270323707422093
+    },
+    {
+      "antecedents": [
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "support": 0.374,
+      "confidence": 0.62751677852349,
+      "lift": 1.0270323707422095
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.718,
+      "confidence": 0.918158567774936,
+      "lift": 1.0123027208102933
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.718,
+      "confidence": 0.967654986522911,
+      "lift": 1.0048338385492326
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.718,
+      "confidence": 0.8159090909090909,
+      "lift": 1.0023453205271389
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.718,
+      "confidence": 0.8820638820638821,
+      "lift": 1.0023453205271387
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.718,
+      "confidence": 0.7455867082035307,
+      "lift": 1.0048338385492328
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.718,
+      "confidence": 0.7916207276736493,
+      "lift": 1.0123027208102933
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.479,
+      "confidence": 0.9123809523809523,
+      "lift": 1.0059326928125163
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.479,
+      "confidence": 0.9676767676767677,
+      "lift": 1.0048564565698523
+    },
+    {
+      "antecedents": [
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.479,
+      "confidence": 0.8740875912408758,
+      "lift": 0.9932813536828133
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "property_auto_u_otro"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.316,
+      "confidence": 0.9604863221884498,
+      "lift": 1.0589705867568355
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "property_auto_u_otro"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.316,
+      "confidence": 0.9937106918238994,
+      "lift": 1.031890645715368
+    },
+    {
+      "antecedents": [
+        "property_auto_u_otro"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.316,
+      "confidence": 0.9518072289156626,
+      "lift": 1.0815991237677984
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.515,
+      "confidence": 0.8864027538726335,
+      "lift": 0.9772907980955164
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.515,
+      "confidence": 0.9680451127819548,
+      "lift": 1.0052389540830269
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.515,
+      "confidence": 0.8540630182421227,
+      "lift": 0.9705261570933212
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.371,
+      "confidence": 0.9298245614035087,
+      "lift": 1.0251648968065146
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.371,
+      "confidence": 0.9867021276595744,
+      "lift": 1.0246128013079694
+    },
+    {
+      "antecedents": [
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.371,
+      "confidence": 0.9183168316831682,
+      "lift": 1.0435418541854184
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.509,
+      "confidence": 0.9024822695035462,
+      "lift": 0.9950190402464676
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.509,
+      "confidence": 0.9585687382297552,
+      "lift": 0.9953984820662048
+    },
+    {
+      "antecedents": [
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.509,
+      "confidence": 0.8540268456375839,
+      "lift": 0.9704850518608908
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.412,
+      "confidence": 0.7847619047619047,
+      "lift": 0.964080964080964
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.412,
+      "confidence": 0.951501154734411,
+      "lift": 0.9880593507107072
+    },
+    {
+      "antecedents": [
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.412,
+      "confidence": 0.751824817518248,
+      "lift": 0.9614128101256368
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.472,
+      "confidence": 0.963265306122449,
+      "lift": 1.0002754996079428
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.472,
+      "confidence": 0.8123924268502581,
+      "lift": 0.9980250944106366
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "support": 0.472,
+      "confidence": 0.6035805626598465,
+      "lift": 1.0009627904806742
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.472,
+      "confidence": 0.7827529021558872,
+      "lift": 1.0009627904806742
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.32,
+      "confidence": 0.9876543209876543,
+      "lift": 1.0256015794264324
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.32,
+      "confidence": 0.8020050125313283,
+      "lift": 0.98526414315888
+    },
+    {
+      "antecedents": [
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.32,
+      "confidence": 0.792079207920792,
+      "lift": 1.0128890126864347
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.462,
+      "confidence": 0.942857142857143,
+      "lift": 0.9790832220738764
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.462,
+      "confidence": 0.8191489361702129,
+      "lift": 1.006325474410581
+    },
+    {
+      "antecedents": [
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.462,
+      "confidence": 0.7751677852348994,
+      "lift": 0.9912631524742959
+    },
+    {
+      "antecedents": [
+        "personal_status_hombre_soltero",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.308,
+      "confidence": 0.9595015576323987,
+      "lift": 0.996367141882034
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.356,
+      "confidence": 0.9518716577540106,
+      "lift": 0.9884440890488169
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.356,
+      "confidence": 0.612736660929432,
+      "lift": 1.0280816458547517
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "support": 0.356,
+      "confidence": 0.6312056737588653,
+      "lift": 1.046775578372911
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.412,
+      "confidence": 0.6367851622874806,
+      "lift": 1.010770098869017
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.412,
+      "confidence": 0.911504424778761,
+      "lift": 1.004966289723
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.412,
+      "confidence": 0.7228070175438597,
+      "lift": 1.0137545828104624
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.412,
+      "confidence": 0.653968253968254,
+      "lift": 1.010770098869017
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.375,
+      "confidence": 0.6510416666666667,
+      "lift": 1.033399470899471
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.375,
+      "confidence": 0.8296460176991151,
+      "lift": 1.019221151964515
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.375,
+      "confidence": 0.7088846880907372,
+      "lift": 0.9942281740403047
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.524,
+      "confidence": 0.9097222222222223,
+      "lift": 1.0030013475437953
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.524,
+      "confidence": 0.8098918083462133,
+      "lift": 0.9949530815064046
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.524,
+      "confidence": 0.706199460916442,
+      "lift": 0.9904620770216579
+    },
+    {
+      "antecedents": [
+        "housing_propietario"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.524,
+      "confidence": 0.7349228611500702,
+      "lift": 0.990462077021658
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.524,
+      "confidence": 0.6437346437346438,
+      "lift": 0.9949530815064047
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.368,
+      "confidence": 0.9019607843137255,
+      "lift": 0.9944440841386168
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.368,
+      "confidence": 0.7434343434343434,
+      "lift": 1.0426849136526557
+    },
+    {
+      "antecedents": [
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.368,
+      "confidence": 0.6715328467153284,
+      "lift": 1.0379178465461025
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.377,
+      "confidence": 0.8767441860465116,
+      "lift": 0.9666418809774108
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.377,
+      "confidence": 0.7086466165413533,
+      "lift": 0.9938942728490229
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.377,
+      "confidence": 0.6252072968490879,
+      "lift": 0.9663173057945718
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.386,
+      "confidence": 0.8914549653579676,
+      "lift": 0.9828610422910338
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.386,
+      "confidence": 0.7269303201506591,
+      "lift": 1.019537615919578
+    },
+    {
+      "antecedents": [
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.386,
+      "confidence": 0.6476510067114094,
+      "lift": 1.0010061927533376
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.323,
+      "confidence": 0.7916666666666667,
+      "lift": 0.9725634725634728
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.323,
+      "confidence": 0.745958429561201,
+      "lift": 1.0462250063971963
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "support": 0.347,
+      "confidence": 0.6024305555555556,
+      "lift": 0.9990556476874886
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.347,
+      "confidence": 0.8069767441860465,
+      "lift": 0.9913719216044797
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.347,
+      "confidence": 0.7081632653061224,
+      "lift": 0.993216360878152
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.352,
+      "confidence": 0.6111111111111112,
+      "lift": 1.0253542132736766
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.352,
+      "confidence": 0.812933025404157,
+      "lift": 0.9986892203982274
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.352,
+      "confidence": 0.7183673469387755,
+      "lift": 1.0075278358187594
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.48,
+      "confidence": 0.6469002695417789,
+      "lift": 1.0268258246694904
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.48,
+      "confidence": 0.9073724007561436,
+      "lift": 1.0004105851776666
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.48,
+      "confidence": 0.8421052631578948,
+      "lift": 1.0345273503168242
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.48,
+      "confidence": 0.7619047619047619,
+      "lift": 1.0268258246694904
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.305,
+      "confidence": 0.6161616161616161,
+      "lift": 0.9780343113676446
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.305,
+      "confidence": 0.8970588235294117,
+      "lift": 0.9890394967248199
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.322,
+      "confidence": 0.6052631578947368,
+      "lift": 0.960735171261487
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.322,
+      "confidence": 0.8797814207650274,
+      "lift": 0.969990541086028
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.347,
+      "confidence": 0.6534839924670433,
+      "lift": 1.0372761785191162
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.347,
+      "confidence": 0.8897435897435897,
+      "lift": 0.9809741893534616
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.347,
+      "confidence": 0.6087719298245614,
+      "lift": 1.0214294124573178
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.303,
+      "confidence": 0.6183673469387755,
+      "lift": 0.9815354713313896
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.303,
+      "confidence": 0.8278688524590164,
+      "lift": 1.017037902283804
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.335,
+      "confidence": 0.6836734693877552,
+      "lift": 1.085195983155167
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.335,
+      "confidence": 0.858974358974359,
+      "lift": 1.0552510552510554
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.335,
+      "confidence": 0.6332703213610587,
+      "lift": 1.0625340962433871
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.393,
+      "confidence": 0.907621247113164,
+      "lift": 1.0006849472030475
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.393,
+      "confidence": 0.793939393939394,
+      "lift": 0.9753555208100664
+    },
+    {
+      "antecedents": [
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.393,
+      "confidence": 0.7171532846715328,
+      "lift": 0.9665138607433057
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.436,
+      "confidence": 0.889795918367347,
+      "lift": 0.981031883536215
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.436,
+      "confidence": 0.819548872180451,
+      "lift": 1.0068167962904804
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.436,
+      "confidence": 0.7230514096185738,
+      "lift": 0.9744628161975388
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.306,
+      "confidence": 0.9444444444444444,
+      "lift": 1.041283841724856
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.306,
+      "confidence": 0.8138297872340425,
+      "lift": 0.9997908934079147
+    },
+    {
+      "antecedents": [
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.306,
+      "confidence": 0.7574257425742573,
+      "lift": 1.0207894104774358
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.436,
+      "confidence": 0.889795918367347,
+      "lift": 0.981031883536215
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.436,
+      "confidence": 0.8210922787193973,
+      "lift": 1.0087128731196526
+    },
+    {
+      "antecedents": [
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.436,
+      "confidence": 0.7315436241610739,
+      "lift": 0.9859078492736845
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.323,
+      "confidence": 0.8636363636363636,
+      "lift": 0.9521900370852961
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "support": 0.323,
+      "confidence": 0.608286252354049,
+      "lift": 1.0087665876518226
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.323,
+      "confidence": 0.6071428571428571,
+      "lift": 1.0186960690316396
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "support": 0.31,
+      "confidence": 0.6326530612244898,
+      "lift": 1.049175889261177
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.31,
+      "confidence": 0.8288770053475936,
+      "lift": 1.0182764193459382
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.31,
+      "confidence": 0.6326530612244898,
+      "lift": 1.061498424873305
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta",
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.303,
+      "confidence": 0.9528301886792453,
+      "lift": 1.0505294252251878
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.303,
+      "confidence": 0.9680511182108625,
+      "lift": 1.005245190250117
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta",
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.303,
+      "confidence": 0.8370165745856354,
+      "lift": 1.0282758901543434
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.303,
+      "confidence": 0.9181818181818181,
+      "lift": 1.043388429752066
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta",
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.303,
+      "confidence": 0.795275590551181,
+      "lift": 1.0717999872657427
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.303,
+      "confidence": 0.8123324396782842,
+      "lift": 1.0387882860336115
+    },
+    {
+      "antecedents": [
+        "checking_account_sin_cuenta"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.303,
+      "confidence": 0.7690355329949238,
+      "lift": 1.0710801295193926
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.31,
+      "confidence": 0.8831908831908832,
+      "lift": 0.9737495955798051
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.31,
+      "confidence": 0.9627329192546583,
+      "lift": 0.999722657585315
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.31,
+      "confidence": 0.6768558951965065,
+      "lift": 0.9493070058857034
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "housing_propietario"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.31,
+      "confidence": 0.842391304347826,
+      "lift": 0.9572628458498024
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.31,
+      "confidence": 0.6078431372549019,
+      "lift": 0.9394793466072672
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.31,
+      "confidence": 0.6567796610169492,
+      "lift": 0.9588024248422615
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.389,
+      "confidence": 0.900462962962963,
+      "lift": 0.9927926824288457
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.389,
+      "confidence": 0.9652605459057072,
+      "lift": 1.0023473996944001
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.389,
+      "confidence": 0.8493449781659389,
+      "lift": 1.0434213490982052
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.389,
+      "confidence": 0.8606194690265486,
+      "lift": 0.9779766693483507
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.389,
+      "confidence": 0.7627450980392158,
+      "lift": 1.027958353152582
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.389,
+      "confidence": 0.8241525423728814,
+      "lift": 1.0539035068706923
+    },
+    {
+      "antecedents": [
+        "credit_history_pagando_puntual"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.389,
+      "confidence": 0.7339622641509433,
+      "lift": 1.0222315656698375
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.401,
+      "confidence": 0.6416000000000001,
+      "lift": 1.0184126984126984
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.401,
+      "confidence": 0.9733009708737865,
+      "lift": 1.0106967506477536
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.401,
+      "confidence": 0.7186379928315412,
+      "lift": 1.0079074233261447
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.401,
+      "confidence": 0.9155251141552512,
+      "lift": 1.0093992438315889
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "support": 0.401,
+      "confidence": 0.6197836166924267,
+      "lift": 1.0143758047339226
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.401,
+      "confidence": 0.7035087719298246,
+      "lift": 1.027020105007043
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.401,
+      "confidence": 0.8871681415929203,
+      "lift": 1.0081456154465003
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.401,
+      "confidence": 0.6563011456628478,
+      "lift": 1.0143758047339224
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.401,
+      "confidence": 0.6365079365079366,
+      "lift": 1.0184126984126984
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.361,
+      "confidence": 0.6563636363636363,
+      "lift": 1.0418470418470416
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.361,
+      "confidence": 0.9626666666666667,
+      "lift": 0.9996538594669436
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.361,
+      "confidence": 0.8242009132420091,
+      "lift": 1.0125318344496426
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.361,
+      "confidence": 0.7037037037037036,
+      "lift": 0.9869617162744792
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "support": 0.361,
+      "confidence": 0.6267361111111112,
+      "lift": 1.0257546826695765
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.361,
+      "confidence": 0.7986725663716814,
+      "lift": 1.0213204173550912
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.361,
+      "confidence": 0.6824196597353497,
+      "lift": 0.9962330799056199
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.504,
+      "confidence": 0.9163636363636363,
+      "lift": 1.0103237446126088
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.504,
+      "confidence": 0.9618320610687022,
+      "lift": 0.9987871869872298
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.504,
+      "confidence": 0.8064,
+      "lift": 0.9906633906633907
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.504,
+      "confidence": 0.701949860724234,
+      "lift": 0.9845019084491361
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.504,
+      "confidence": 0.8750000000000001,
+      "lift": 0.994318181818182
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.504,
+      "confidence": 0.7357664233576642,
+      "lift": 0.9915989533122159
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.504,
+      "confidence": 0.7789799072642968,
+      "lift": 0.9961379888290239
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.504,
+      "confidence": 0.6445012787723785,
+      "lift": 0.9961379888290239
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.504,
+      "confidence": 0.6792452830188679,
+      "lift": 0.9915989533122158
+    },
+    {
+      "antecedents": [
+        "housing_propietario"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.504,
+      "confidence": 0.7068723702664798,
+      "lift": 0.9845019084491362
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.504,
+      "confidence": 0.6191646191646192,
+      "lift": 0.9906633906633907
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.357,
+      "confidence": 0.9130434782608695,
+      "lift": 1.006663151335027
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.357,
+      "confidence": 0.7453027139874739,
+      "lift": 1.0453053492110433
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.357,
+      "confidence": 0.9701086956521738,
+      "lift": 1.0073818231071379
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.357,
+      "confidence": 0.6799999999999999,
+      "lift": 1.0510046367851622
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.357,
+      "confidence": 0.875,
+      "lift": 0.9943181818181818
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.357,
+      "confidence": 0.7212121212121212,
+      "lift": 1.052864410528644
+    },
+    {
+      "antecedents": [
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.357,
+      "confidence": 0.6514598540145985,
+      "lift": 1.0423357664233577
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.362,
+      "confidence": 0.8786407766990292,
+      "lift": 0.9687329401312339
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.362,
+      "confidence": 0.9602122015915119,
+      "lift": 0.9971050899184962
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.362,
+      "confidence": 0.7029126213592233,
+      "lift": 0.9858522038698784
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.362,
+      "confidence": 0.8418604651162791,
+      "lift": 0.9566596194503172
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.362,
+      "confidence": 0.6230636833046472,
+      "lift": 0.9630041473023914
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.362,
+      "confidence": 0.6804511278195489,
+      "lift": 0.9933593106854727
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.362,
+      "confidence": 0.6003316749585407,
+      "lift": 0.960530679933665
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.369,
+      "confidence": 0.9,
+      "lift": 0.9922822491730982
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.369,
+      "confidence": 0.9559585492227979,
+      "lift": 0.9926880054234661
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.369,
+      "confidence": 0.724950884086444,
+      "lift": 1.0167614082558822
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.369,
+      "confidence": 0.8521939953810623,
+      "lift": 0.9684022674784799
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.369,
+      "confidence": 0.6542553191489362,
+      "lift": 1.0112137853924825
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.369,
+      "confidence": 0.6949152542372881,
+      "lift": 1.0144748237040702
+    },
+    {
+      "antecedents": [
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.369,
+      "confidence": 0.6191275167785235,
+      "lift": 0.9906040268456376
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.307,
+      "confidence": 0.7851662404092071,
+      "lift": 0.9645776909204019
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.307,
+      "confidence": 0.7451456310679612,
+      "lift": 1.0450850365609554
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.307,
+      "confidence": 0.9504643962848297,
+      "lift": 0.9869827583435408
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.307,
+      "confidence": 0.7524509803921569,
+      "lift": 0.962213529913244
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.307,
+      "confidence": 0.7090069284064665,
+      "lift": 1.0350466108123597
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.331,
+      "confidence": 0.9538904899135447,
+      "lift": 0.9905404879683747
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.331,
+      "confidence": 0.8033980582524273,
+      "lift": 0.9869755015386085
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.331,
+      "confidence": 0.701271186440678,
+      "lift": 0.9835500511089453
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "support": 0.331,
+      "confidence": 0.6018181818181818,
+      "lift": 0.9980401025177145
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.331,
+      "confidence": 0.7697674418604652,
+      "lift": 0.9843573425325641
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.331,
+      "confidence": 0.6755102040816326,
+      "lift": 0.9861462833308505
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.33,
+      "confidence": 0.6,
+      "lift": 1.0067114093959733
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.33,
+      "confidence": 0.9375000000000001,
+      "lift": 0.973520249221184
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.33,
+      "confidence": 0.8048780487804879,
+      "lift": 0.9887936717205011
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.33,
+      "confidence": 0.7142857142857143,
+      "lift": 1.0018032458425166
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.33,
+      "confidence": 0.7621247113163973,
+      "lift": 0.9745840298163647
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.33,
+      "confidence": 0.6734693877551021,
+      "lift": 0.9831669894235067
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.469,
+      "confidence": 0.6532033426183844,
+      "lift": 1.0368307025688641
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.469,
+      "confidence": 0.9770833333333333,
+      "lift": 1.0146244375216338
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.469,
+      "confidence": 0.8405017921146952,
+      "lift": 1.0325574841703873
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.469,
+      "confidence": 0.9142300194931773,
+      "lift": 1.0079713555602836
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "support": 0.469,
+      "confidence": 0.6320754716981132,
+      "lift": 1.034493407034555
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.469,
+      "confidence": 0.8228070175438597,
+      "lift": 1.052182886884731
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.469,
+      "confidence": 0.886578449905482,
+      "lift": 1.0074755112562295
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.469,
+      "confidence": 0.7675941080196399,
+      "lift": 1.034493407034555
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.469,
+      "confidence": 0.7444444444444444,
+      "lift": 1.0368307025688641
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.3,
+      "confidence": 0.6263048016701461,
+      "lift": 0.9941346058256287
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.3,
+      "confidence": 0.9063444108761328,
+      "lift": 0.9992771894995951
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.3,
+      "confidence": 0.9836065573770492,
+      "lift": 1.0213982942648485
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "support": 0.3,
+      "confidence": 0.6060606060606061,
+      "lift": 0.9919158855329069
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.3,
+      "confidence": 0.8823529411764705,
+      "lift": 1.0026737967914436
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.316,
+      "confidence": 0.6135922330097088,
+      "lift": 0.9739559254122362
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.316,
+      "confidence": 0.9813664596273292,
+      "lift": 1.0190721283772888
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.316,
+      "confidence": 0.8876404494382023,
+      "lift": 0.9786554018061767
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.316,
+      "confidence": 0.8633879781420766,
+      "lift": 0.9811227024341779
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.338,
+      "confidence": 0.6640471512770137,
+      "lift": 1.0540430972651011
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.338,
+      "confidence": 0.974063400576369,
+      "lift": 1.0114884741187633
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.338,
+      "confidence": 0.6057347670250895,
+      "lift": 1.0163335017199489
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.338,
+      "confidence": 0.9037433155080214,
+      "lift": 0.9964093886527249
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "support": 0.338,
+      "confidence": 0.6365348399246704,
+      "lift": 1.0417918820371037
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.338,
+      "confidence": 0.8666666666666667,
+      "lift": 0.9848484848484849
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.322,
+      "confidence": 0.6969696969696969,
+      "lift": 1.1063011063011061
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.322,
+      "confidence": 0.9611940298507462,
+      "lift": 0.9981246415895599
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.322,
+      "confidence": 0.8609625668449198,
+      "lift": 1.057693571062555
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.322,
+      "confidence": 0.6276803118908382,
+      "lift": 1.053154885722883
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "support": 0.322,
+      "confidence": 0.6571428571428571,
+      "lift": 1.0755202244563946
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.322,
+      "confidence": 0.8256410256410256,
+      "lift": 1.0558069381598791
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "telephone_sin_telefono"
+      ],
+      "support": 0.322,
+      "confidence": 0.6086956521739131,
+      "lift": 1.0792476102374347
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.379,
+      "confidence": 0.9199029126213593,
+      "lift": 1.0142259235075626
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.379,
+      "confidence": 0.791231732776618,
+      "lift": 0.972029155745231
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.379,
+      "confidence": 0.9643765903307888,
+      "lift": 1.0014294811326987
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.379,
+      "confidence": 0.7219047619047618,
+      "lift": 0.972917468874342
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.379,
+      "confidence": 0.8752886836027713,
+      "lift": 0.9946462313667856
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.379,
+      "confidence": 0.7656565656565657,
+      "lift": 0.9791004675915163
+    },
+    {
+      "antecedents": [
+        "personal_status_hombre_soltero"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.379,
+      "confidence": 0.6916058394160584,
+      "lift": 0.9632393306630339
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.421,
+      "confidence": 0.891949152542373,
+      "lift": 0.9834059013697607
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.421,
+      "confidence": 0.9655963302752293,
+      "lift": 1.0026960854363751
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.421,
+      "confidence": 0.8174757281553398,
+      "lift": 1.0042699363087713
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.421,
+      "confidence": 0.8591836734693877,
+      "lift": 0.9763450834879406
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.421,
+      "confidence": 0.7246127366609294,
+      "lift": 0.9765670305403361
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.421,
+      "confidence": 0.7913533834586466,
+      "lift": 1.0119608484125915
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.421,
+      "confidence": 0.6981757877280266,
+      "lift": 0.9723896765014298
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.302,
+      "confidence": 0.94375,
+      "lift": 1.0405181918412347
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.302,
+      "confidence": 0.9869281045751633,
+      "lift": 1.0248474606180304
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.302,
+      "confidence": 0.8140161725067385,
+      "lift": 1.0000198679443963
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.302,
+      "confidence": 0.9320987654320987,
+      "lift": 1.0592031425364759
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.302,
+      "confidence": 0.7568922305764411,
+      "lift": 1.0200703916124543
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.302,
+      "confidence": 0.8031914893617021,
+      "lift": 1.0270990912553735
+    },
+    {
+      "antecedents": [
+        "telephone_con_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.302,
+      "confidence": 0.7475247524752474,
+      "lift": 1.0411208251744393
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.416,
+      "confidence": 0.9004329004329004,
+      "lift": 0.9927595374122385
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.416,
+      "confidence": 0.9541284403669724,
+      "lift": 0.9907875808587461
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.416,
+      "confidence": 0.8172888015717091,
+      "lift": 1.0040402967711415
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.416,
+      "confidence": 0.8489795918367347,
+      "lift": 0.9647495361781075
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.416,
+      "confidence": 0.7375886524822696,
+      "lift": 0.9940547877119537
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.416,
+      "confidence": 0.783427495291902,
+      "lift": 1.0018254415497467
+    },
+    {
+      "antecedents": [
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.416,
+      "confidence": 0.697986577181208,
+      "lift": 0.9721261520629639
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.31,
+      "confidence": 0.8707865168539326,
+      "lift": 0.9600733372149202
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.31,
+      "confidence": 0.9597523219814241,
+      "lift": 0.9966275409983636
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "telephone_sin_telefono"
+      ],
+      "support": 0.31,
+      "confidence": 0.6019417475728155,
+      "lift": 1.0099693751221737
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "savings_account_ahorros_bajos"
+      ],
+      "support": 0.31,
+      "confidence": 0.6090373280943026,
+      "lift": 1.01001215272687
+    },
+    {
+      "antecedents": [
+        "savings_account_ahorros_bajos",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.31,
+      "confidence": 0.8288770053475936,
+      "lift": 0.9419056878949927
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.342,
+      "confidence": 0.6526717557251909,
+      "lift": 1.0359869138495092
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.342,
+      "confidence": 0.912,
+      "lift": 1.0055126791620728
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.342,
+      "confidence": 0.8300970873786409,
+      "lift": 1.019775291619952
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.342,
+      "confidence": 0.7125000000000001,
+      "lift": 0.9992987377279104
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.342,
+      "confidence": 0.756637168141593,
+      "lift": 1.0197266417002602
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.342,
+      "confidence": 0.6465028355387524,
+      "lift": 0.9992315850676236
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_installments_ninguno"
+      ],
+      "support": 0.342,
+      "confidence": 0.6000000000000001,
+      "lift": 1.041666666666667
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.305,
+      "confidence": 0.8789625360230549,
+      "lift": 0.9690876913153857
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.305,
+      "confidence": 0.8090185676392573,
+      "lift": 0.9938803042251318
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.305,
+      "confidence": 0.6995412844036697,
+      "lift": 0.9811238210430151
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.305,
+      "confidence": 0.7093023255813954,
+      "lift": 0.9559330533441986
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "savings_account_ahorros_bajos"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.305,
+      "confidence": 0.6224489795918368,
+      "lift": 0.9620540642841372
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.313,
+      "confidence": 0.8892045454545455,
+      "lift": 0.980379873709532
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.313,
+      "confidence": 0.810880829015544,
+      "lift": 0.9961680946136905
+    },
+    {
+      "antecedents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.313,
+      "confidence": 0.7178899082568807,
+      "lift": 1.0068582163490614
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.313,
+      "confidence": 0.7228637413394919,
+      "lift": 0.9742098939885336
+    },
+    {
+      "antecedents": [
+        "other_installments_ninguno",
+        "telephone_sin_telefono"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.313,
+      "confidence": 0.6387755102040816,
+      "lift": 0.987288269248967
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "other_debtors_ninguno"
+      ],
+      "support": 0.331,
+      "confidence": 0.9168975069252079,
+      "lift": 1.010912356036613
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero"
+      ],
+      "support": 0.331,
+      "confidence": 0.9678362573099415,
+      "lift": 1.0050220740497835
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "other_installments_ninguno"
+      ],
+      "support": 0.331,
+      "confidence": 0.8254364089775561,
+      "lift": 1.0140496424785703
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "job_empleado_calificado"
+      ],
+      "support": 0.331,
+      "confidence": 0.6567460317460317,
+      "lift": 1.0424540186444948
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario"
+      ],
+      "support": 0.331,
+      "confidence": 0.7057569296375267,
+      "lift": 0.989841416041412
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.331,
+      "confidence": 0.8826666666666667,
+      "lift": 1.0030303030303032
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.331,
+      "confidence": 0.7557077625570776,
+      "lift": 1.0184740735270588
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_installments_ninguno"
+      ],
+      "support": 0.331,
+      "confidence": 0.8033980582524273,
+      "lift": 1.0273632458470936
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.331,
+      "confidence": 0.6018181818181818,
+      "lift": 1.0558213716108453
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado"
+      ],
+      "support": 0.331,
+      "confidence": 0.6316793893129771,
+      "lift": 1.0338451543583913
+    },
+    {
+      "antecedents": [
+        "foreign_worker_trabajador_extranjero",
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.331,
+      "confidence": 0.645224171539961,
+      "lift": 0.9972552883152411
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario"
+      ],
+      "support": 0.331,
+      "confidence": 0.6895833333333334,
+      "lift": 1.00669099756691
+    },
+    {
+      "antecedents": [
+        "housing_propietario",
+        "job_empleado_calificado"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "other_debtors_ninguno",
+        "other_installments_ninguno"
+      ],
+      "support": 0.331,
+      "confidence": 0.7323008849557522,
+      "lift": 1.0199176670692929
+    },
+    {
+      "antecedents": [
+        "job_empleado_calificado",
+        "other_installments_ninguno"
+      ],
+      "consequents": [
+        "foreign_worker_trabajador_extranjero",
+        "housing_propietario",
+        "other_debtors_ninguno"
+      ],
+      "support": 0.331,
+      "confidence": 0.6257088846880907,
+      "lift": 1.001134215500945
+    }
+  ]
+}
