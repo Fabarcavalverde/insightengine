@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42334c8e-66ac-4f9b-bf4e-d66aa202d835" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environment.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/apply_mappings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/json_saver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classification/classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/classification/classification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/raw/german.data" beforeDir="false" afterPath="$PROJECT_DIR$/data/raw/german.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/raw/playtennis.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ingestion/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ingestion/data_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/preprocessing/cleaner.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/preprocessing/data_preparator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocessing/data_preparator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/regularization/lasso_ridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/regularization/lasso_ridge.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/config.py" afterDir="false" />
-    </list>
+    <list default="true" id="42334c8e-66ac-4f9b-bf4e-d66aa202d835" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +84,7 @@
       <workItem from="1774229245710" duration="4992000" />
       <workItem from="1774408603618" duration="104000" />
       <workItem from="1775439774200" duration="5785000" />
-      <workItem from="1776121029406" duration="4941000" />
+      <workItem from="1776121029406" duration="5265000" />
     </task>
     <servers />
   </component>
