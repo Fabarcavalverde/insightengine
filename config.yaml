@@ -49,7 +49,7 @@ dimensionality:
   n_components: 2
   n_clusters: 3
   tsne:
-    perplexity: 30
+    perplexity: 10
     learning_rate: "auto"
   umap:
     n_neighbors: 15
